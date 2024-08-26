@@ -1,8 +1,33 @@
-# c20-22-m-java-react
-Repo de la web-app de la cohorte c20-22-m-java-react
+# [nombre de la app]
+
+## Descripción del proyecto
+Esta web app busca...
 
 ## Integrantes
-- Mariana Rosso 
+- Mariana Rosso  - QA Tester -
+- Gabriel Gotlib - Frontend - https://www.linkedin.com/in/gabriel-gotlib-5855197b
+- Sebastian Jimenez - Proyect Manager -
+- Gisele Moises - QA Tester -
+- Dahier Quintero - Backend -
+- Marianella Machicado - Backend -
+- Martin Cerbin - Frontend -
+- Luz de los Angeles Lamas - Frontend - 
+- completar...
 
-- Gabriel Gotlib
 
+## Tecnologias
+
+### Frontend
+ - React
+ - [tecnologias de estilos]
+ - otros...
+
+### Backend
+
+ - Java
+ - [tecnologia de BBD] 
+ - otros..
+ 
+### Enlaces
+
+**Deploy:** [Front posiblemente Vercel]
