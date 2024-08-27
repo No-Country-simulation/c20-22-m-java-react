@@ -1,4 +1,5 @@
 // import React from 'react'
+
 import styles from './Home.module.css'
 
 function Home() {
@@ -8,9 +9,13 @@ function Home() {
 			<p className={styles.subtitle}>Perdiste tu mascota? Encontraste una mascota perdida? </p>
 			<p>Aquí las mascotas y sus humanos se reencuentran</p>
 
-			<div>
-				<button type='button'>Perdí mi mascota</button>
-				<button type='button'>Encontré una mascota</button>
+			<div className={styles.buttonsContainer}>
+				<button type='button' className={styles.buttonPerdi} onClick={() => console.log('click')}>
+					Perdí mi mascota
+				</button>
+				<button type='button' className={styles.buttonEncontre} onClick={() => console.log('click')}>
+					Encontré una mascota
+				</button>
 			</div>
 		</main>
 	)
