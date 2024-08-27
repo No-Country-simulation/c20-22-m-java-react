@@ -1,0 +1,42 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	min-height: 100vh;
+	padding: 2rem 1rem;
+}
+
+.title {
+	color: var(--color-primario);
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+}
+
+.subtitle {
+	color: var(--color-primario);
+	font-size: 1.5rem;
+}
+
+.buttonsContainer {
+	display: flex;
+	gap: 1rem;
+}
+.buttonPerdi {
+	background: var(--color-secundario);
+	color: var(--color-primario);
+	padding: 1rem 2rem;
+	border-radius: 5rem;
+}
+.buttonPerdi:hover {
+	cursor: pointer;
+}
+.buttonEncontre {
+	background: var(--color-primario);
+	color: var(--color-secundario);
+	padding: 1rem 2rem;
+	border-radius: 5rem;
+}
+.buttonEncontre:hover {
+	cursor: pointer;
+}
