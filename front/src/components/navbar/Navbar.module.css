@@ -1,0 +1,5 @@
+.navbar{
+  background-color: var(--color-secundario);
+  color:var(--color-primario);
+  height: 3rem;
+}

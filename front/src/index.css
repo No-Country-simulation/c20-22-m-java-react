@@ -1,27 +1,34 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* definir colores */
+	--color-primario: #003459;
+	--color-fondo: #fdfdfd;
+	--color-secundario: #F7DBA7;
+	/* --color-hover: #747bff; */
+	/* --color-boton-fondo: #f9f9f9; */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	color-scheme: light;
+	color: rgba(0, 23, 31, 1);
+	background-color: (--color-fondo);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  place-content: center;
-  /* justify-items: center; */
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	/* place-items: center; */
+	/* place-content: center; */
+	/* justify-items: center; */
+	min-width: 320px;
+	min-height: 100vh;
 }
 
 /* a {
@@ -43,7 +50,6 @@ button {
 button:hover {
 
 } */
-
 
 /* @media (prefers-color-scheme: light) {
   :root {
