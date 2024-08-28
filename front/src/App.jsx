@@ -1,12 +1,20 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Home from './views/home/Home'
+import Login from './views/login/Login'
+import ErrorPage from './views/ErrorPage/ErrorPage'
 
 function App() {
 	return (
 		<>
 			<Navbar />
-			<Home />
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/login' element={<Login />} />
+				<Route path='/*' element={<ErrorPage />} />
+			</Routes>
+
 		</>
 	)
 }

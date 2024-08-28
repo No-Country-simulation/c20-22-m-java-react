@@ -1,0 +1,67 @@
+/* Login.module.css */
+.container {
+  height: 100vh;
+  padding-top: 1rem;
+}
+
+.formContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.titleSm {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  max-width: 24rem;
+  margin: 0 auto;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+
+  font-weight: normal;
+  color: var(--color-primario); 
+    font-size: 1rem;
+}
+
+.input {
+  background-color: var(--color-secundario); 
+  border: 2px solid var(--color-primario); 
+  color: var(--color-primario); 
+  font-size: 0.875rem;
+  border-radius: 2rem;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+    font-size: 1rem;
+}

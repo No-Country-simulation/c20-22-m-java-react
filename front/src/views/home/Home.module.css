@@ -5,6 +5,10 @@
 	/* justify-content: center; */
 	min-height: 100vh;
 	padding: 2rem 1rem;
+	background-image: url("../../../public/mascota-home.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+
 }
 
 .title {
