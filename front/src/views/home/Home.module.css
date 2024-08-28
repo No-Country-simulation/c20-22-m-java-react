@@ -46,6 +46,14 @@
 	max-width: 80%;
 	text-align: center;
 }
+.text {
+	display: flex;
+	color: var(--color-secundario);
+	font-size: 1.2rem;
+	text-wrap: wrap;
+	max-width: 80%;
+	text-align: center;
+}
 
 .buttonsContainer {
 	display: flex;
@@ -59,7 +67,7 @@
 	padding: 1rem 2rem;
 	border-width: 2px;
 	border-radius: 5rem;
-	border-color: var(--color-primario);
+	/* border-color: var(--color-primario); */
 	font-size: 1rem;
 }
 
@@ -73,7 +81,7 @@
 	padding: 1rem 2rem;
 	border-width: 2px;
 	border-radius: 5rem;
-	border-color: var(--color-secundario);
+	/* border-color: var(--color-secundario); */
 	font-size: 1rem;
 }
 
