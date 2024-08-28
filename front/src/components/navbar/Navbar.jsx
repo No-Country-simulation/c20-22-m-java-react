@@ -17,16 +17,24 @@ function Navbar() {
 			</button>
 			<ul className={`${styles.navbarList} ${isMobileMenuOpen ? styles.navbarListOpen : ''}`}>
 				<li>
-					<Link to='/'>Home</Link>
+					<Link to='/' onClick={toggleMobileMenu}>
+						Home
+					</Link>
 				</li>
 				<li>
-					<Link to='/login'>Iniciar sesión</Link>
+					<Link to='/login' onClick={toggleMobileMenu}>
+						Iniciar sesión
+					</Link>
 				</li>
 				<li>
-					<Link to='/register'>Registrarse</Link>
+					<Link to='/register' onClick={toggleMobileMenu}>
+						Registrarse
+					</Link>
 				</li>
 				<li>
-					<Link to='/contact'>Contacto</Link>
+					<Link to='/contact' onClick={toggleMobileMenu}>
+						Contacto
+					</Link>
 				</li>
 			</ul>
 		</nav>

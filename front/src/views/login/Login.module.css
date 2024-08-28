@@ -2,6 +2,28 @@
 .container {
   height: 100vh;
   padding-top: 1rem;
+  background-image: url('/mascota-login.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+	min-height: 50vh;
+	@media (max-width: 768px) {
+		min-height: 100vh;
+		background-size: cover;
+		background-position: center;
+	}
+}
+.container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de opacidad aquí */
+	z-index: -1;
 }
 
 .formContainer {
@@ -15,6 +37,7 @@
 .title {
   font-size: 2rem;
   margin-bottom: 1rem;
+    color: var(--color-secundario); 
 }
 
 .titleSm {
@@ -36,7 +59,7 @@
   margin-bottom: 0.5rem;
 
   font-weight: normal;
-  color: var(--color-primario); 
+  color: var(--color-secundario); 
     font-size: 1rem;
 }
 
