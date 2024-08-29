@@ -4,7 +4,7 @@
 Esta web app busca...
 
 ## Integrantes
-- Mariana Rosso  - QA Tester -
+- Mariana Rosso  - QA Tester - https://www.linkedin.com/in/mariana-rosso/
 - Gabriel Gotlib - Frontend - https://www.linkedin.com/in/gabriel-gotlib-5855197b
 - Sebastian Jimenez - Proyect Manager -
 - Gisele Moises - QA Tester -
