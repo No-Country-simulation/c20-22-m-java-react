@@ -1,4 +1,4 @@
-import  { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Navbar.module.css'
 
@@ -11,7 +11,11 @@ function Navbar() {
 
 	return (
 		<nav className={styles.navbar}>
-			<div className={styles.navbarTitle}>Mi App</div>
+			<div className={styles.navbarTitle}>
+				<Link to='/' className={styles.navbarTitle}>
+					Mi App
+				</Link>
+			</div>
 			<button className={styles.hamburger} onClick={toggleMobileMenu}>
 				☰
 			</button>
