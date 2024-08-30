@@ -9,7 +9,7 @@ Esta web app busca crear una plataforma funcional que permita a los usuarios rep
 - Sebastian Jimenez - Proyect Manager - 
 - Gisele Moises - QA Tester -
 - Dahier Quintero - Backend -
-- Marianella Machicado - Backend -
+- Marianella Machicado - Backend - https://www.linkedin.com/in/marianella-machicado
 - Martin Cerbin - Frontend - https://www.linkedin.com/in/martin-cerbin/
 - Luz de los Angeles Lamas - Frontend - https://www.linkedin.com/in/luz-lamas-a7b30024b/
 - completar...
@@ -25,8 +25,8 @@ Esta web app busca crear una plataforma funcional que permita a los usuarios rep
 ### Backend
 
  - Java
- - [tecnologia de BBD] 
- - otros..
+ - MongoDB 
+ - Postman
  
 ### Enlaces
 
