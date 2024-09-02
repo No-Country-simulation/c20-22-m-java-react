@@ -2,6 +2,7 @@
 
 import styles from './Home.module.css'
 import ListaDeTarjetas from '../../components/tarjeta/ListaDeTarjetas'
+import { Link } from 'react-router-dom'
 
 function Home() {
 	// const posteos = axios.get(rutaasdasdasd/posts)
@@ -24,14 +25,14 @@ function Home() {
 					Aquí entendemos lo importante que es para ti encontrar a tu compañero peludo. Por eso, hemos creado una plataforma simple y efectiva para ayudarte a reunirte con tu mascota o para que puedas
 					ayudar a otros a encontrar la suya
 				</p>
-
+				<br />
 				<div className={styles.buttonsContainer}>
-					<button type='button' className={styles.buttonPerdi} onClick={() => console.log('click')}>
+					<Link to={'/publishlost'} className={styles.buttonPerdi}>
 						Perdí mi mascota
-					</button>
-					<button type='button' className={styles.buttonEncontre} onClick={() => console.log('click')}>
+					</Link>
+					<Link to={'/publishfound'} className={styles.buttonEncontre}>
 						Encontré una mascota
-					</button>
+					</Link>
 				</div>
 			</div>
 
