@@ -3,6 +3,7 @@ import { useState } from 'react'
 import styles from './Publishfound.module.css'
 
 export default function Publishfound() {
+	const [images, setImages] = useState([])
 	const [formData, setFormData] = useState({
 		publicaDueño: false,
 		rescatada: false,
@@ -18,15 +19,46 @@ export default function Publishfound() {
 		contactoNombre: '',
 		contactoTelefono: '',
 		contactoEmail: '',
-		fotos: ''
+		fotos: []
 	})
+
+	function convertToBase64(e) {
+		const files = Array.from(e.target.files)
+		const promises = files.map((file) => {
+			return new Promise((resolve, reject) => {
+				const reader = new FileReader()
+				reader.readAsDataURL(file)
+				reader.onload = () => resolve(reader.result)
+				reader.onerror = (error) => reject(error)
+			})
+		})
+
+		Promise.all(promises)
+			.then((base64Images) => {
+				setImages(base64Images)
+				setFormData({
+					...formData,
+					fotos: base64Images
+				})
+			})
+			.catch((error) => console.error('Error al convertir imágenes:', error))
+	}
 
 	const handleChange = (e) => {
 		const { name, value } = e.target
-		setFormData((formData) => ({
-			...formData,
-			[name]: value
-		}))
+
+		// Convertir el string en un array de colores si es el campo mascotaColores
+		if (name === 'mascotaColores') {
+			setFormData((prevFormData) => ({
+				...prevFormData,
+				[name]: value.split(',').map((color) => color.trim()) // Convertir en array y eliminar espacios
+			}))
+		} else {
+			setFormData((prevFormData) => ({
+				...prevFormData,
+				[name]: value
+			}))
+		}
 	}
 
 	const handleSubmit = async (e) => {
@@ -36,6 +68,7 @@ export default function Publishfound() {
 	}
 
 	const handleClear = () => {
+		setImages([])
 		setFormData({
 			publicaDueño: false,
 			rescatada: false,
@@ -51,19 +84,17 @@ export default function Publishfound() {
 			contactoNombre: '',
 			contactoTelefono: '',
 			contactoEmail: '',
-			fotos: ''
+			fotos: []
 		})
 		console.log('formulario borrado')
 	}
 
-
-  return (
-			<section className={styles.section}>
+	return (
+		<section className={styles.section}>
 			<h3 className={styles.title}>Viste una mascota perdida? </h3>
 			<h4 className={styles.subtitle}>Completá el formulario y ayudá a que se reencuentre con su dueño</h4>
 			<div className={styles.formContainer}>
 				<form onSubmit={handleSubmit} className={styles.form}>
-
 					<label htmlFor='fechaPerdida'>Fecha en que lo viste</label>
 					<input type='date' name='fechaPerdida' id='fechaPerdida' className={styles.input} onChange={handleChange} required value={formData.fechaPerdida} />
 					<label htmlFor='zona'>Zona / Barrio en que viste la mascota</label>
@@ -101,6 +132,12 @@ export default function Publishfound() {
 						value={formData.mascotaOtros}
 						rows={4}
 					/>
+
+					<label htmlFor='fotos'>Fotos de la mascota</label>
+					<input accept='/image/*' type='file' name='fotos' id='fotos' className={styles.input} onChange={convertToBase64} multiple />
+					{images.map((img, index) => (
+						<img key={index} src={img} alt={`mascota ${index}`} width={100} height={100} />
+					))}
 
 					<label htmlFor='contactoNombre'>Nombre de contacto</label>
 					<input type='text' name='contactoNombre' id='contactoNombre' placeholder='Ej: Juan' className={styles.input} onChange={handleChange} required value={formData.contactoNombre} />
