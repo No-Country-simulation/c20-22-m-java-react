@@ -1,13 +1,11 @@
-package com.noCountry.petRescue;
+package com.no.country.pet.rescue;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PetRescueApplication {
-
+public class BackApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(PetRescueApplication.class, args);
+		SpringApplication.run(BackApplication.class, args);
 	}
-
 }
