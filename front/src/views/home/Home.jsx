@@ -1,13 +1,14 @@
 // import React from 'react'
-
+import { useState } from 'react';
 import styles from './Home.module.css'
 import ListaDeTarjetas from '../../components/tarjeta/ListaDeTarjetas'
+import { publicaciones } from '../../helpers/publicaciones.mock'; 
 import { Link } from 'react-router-dom'
 
 function Home() {
 	// const posteos = axios.get(rutaasdasdasd/posts)
 
-	//lista iterada de animales
+/*	//lista iterada de animales
 	const animales = Array.from({ length: 10 }, () => ({
 		foto: '/perro.jpg',
 		nombre: 'Dubi',
@@ -15,6 +16,22 @@ function Home() {
 		genero: 'Macho',
 		edad: '5 años'
 	}))
+*/
+  // Estado para manejar la categoria seleccionada
+  const [filtro, setFiltro] = useState('dueños');
+
+  // Filtrar segun la categoria seleccionada
+  const mascotasFiltradas = publicaciones.filter((publicacion) => {
+    if (filtro === 'dueños') {
+      return publicacion.publicaDueño && !publicacion.rescatada;
+    } else if (filtro === 'otros') {
+      return !publicacion.publicaDueño && !publicacion.rescatada;
+    } else if (filtro === 'rescatadas') {
+      return publicacion.rescatada;
+    }
+    return [];
+  });
+
 
 	return (
 		<main>
@@ -36,10 +53,29 @@ function Home() {
 				</div>
 			</div>
 
-			<div>
-				<h1>Lista de Mascotas</h1>
-				<ListaDeTarjetas animales={animales} />
-			</div>
+			{/* Selector de filtro */}
+			<div className={styles.filterContainer}>
+	<label htmlFor="filtro">Filtrar por:</label>
+	<select
+		id="filtro"
+		value={filtro}
+		onChange={(e) => setFiltro(e.target.value)}
+		className={styles.selectFiltro}
+	>
+		<option value="dueños">Mascotas perdidas por sus dueños</option>
+		<option value="otros">Mascotas encontradas perdidas por otras personas</option>
+		<option value="rescatadas">Mascotas rescatadas</option>
+	</select>
+</div>
+
+      <div>
+        <h2>
+          {filtro === 'dueños' && 'Mascotas perdidas '}
+          {filtro === 'otros' && 'Mascotas encontradas perdidas por otras personas'}
+          {filtro === 'rescatadas' && 'Mascotas Rescatadas'}
+        </h2>
+        <ListaDeTarjetas animales={mascotasFiltradas} />
+      </div>
 		</main>
 	)
 }
