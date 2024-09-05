@@ -4,6 +4,7 @@ import com.no.country.pet.rescue.dtos.PublicacionDTO;
 import com.no.country.pet.rescue.entities.Publicacion;
 import com.no.country.pet.rescue.repositories.PublicacionRepository;
 import com.no.country.pet.rescue.services.IPublicacionService;
+import com.no.country.pet.rescue.utils.CovertirPublicacion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class PublicacionServiceImp implements IPublicacionService {
     @Override
     public PublicacionDTO save(PublicacionDTO publicacion) {
 
-        Publicacion publicacionToSave = Publicacion.publicacionDTOToPublicacion(publicacion);
+        Publicacion publicacionToSave = CovertirPublicacion.publicacionDTOToPublicacion(publicacion);
 
         publicacionRepository.save(publicacionToSave);
 
