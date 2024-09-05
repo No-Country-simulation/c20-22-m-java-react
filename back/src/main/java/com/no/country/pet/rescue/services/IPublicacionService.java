@@ -5,6 +5,6 @@ import java.util.List;
 public interface IPublicacionService {
     PublicacionDTO save(PublicacionDTO publicacion);
     List<PublicacionDTO> obtenerTodo();
-    PublicacionDTO buscarPorId(String idPublicacion);
+    PublicacionDTO findById(String idPublicacion);
     String borrarPorId(String idPublicacion);
 }

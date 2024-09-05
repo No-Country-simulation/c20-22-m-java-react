@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PublicacionServiceImp implements IPublicacionService {
@@ -32,8 +33,9 @@ public class PublicacionServiceImp implements IPublicacionService {
     }
 
     @Override
-    public PublicacionDTO buscarPorId(String idPublicacion) {
-        return null;
+    public PublicacionDTO findById(String idPublicacion) {
+        Optional<Publicacion> publicacion = publicacionRepository.findById(idPublicacion);
+
     }
 
     @Override
