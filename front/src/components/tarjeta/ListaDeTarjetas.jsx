@@ -1,5 +1,4 @@
-import  { useState } from 'react'
-import Tarjeta from './tarjeta';
+import Tarjeta from './Tarjeta';
 import styles from './Tarjeta.module.css';
 
 const ListaDeTarjetas = ({ animales }) => {
@@ -8,11 +7,11 @@ const ListaDeTarjetas = ({ animales }) => {
       {animales.map((animal, index) => (
         <Tarjeta 
           key={index}
-          foto={animal.foto}
+          fotos={animal.fotos}
           nombre={animal.nombre}
-          direccion={animal.direccion}
-          genero={animal.genero}
-          edad={animal.edad}
+          direccion={animal.zona}  
+          genero={animal.mascotaEspecie}
+          edad={animal.mascotaEdad}
         />
       ))}
     </div>
