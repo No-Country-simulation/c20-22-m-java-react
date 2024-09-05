@@ -71,7 +71,7 @@ export default function Publishfound() {
 		} catch (error) {
 			console.log(error)
 		}
-		//lógica para enviar al back el formulario
+
 	}
 
 	const handleClear = () => {

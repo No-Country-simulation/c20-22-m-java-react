@@ -1,6 +1,7 @@
 // import React from 'react'
 import { useState } from 'react'
 import styles from './Publishlost.module.css'
+import axios from 'axios'
 
 export default function Publishlost() {
 	const [images, setImages] = useState([])
@@ -69,7 +70,13 @@ export default function Publishlost() {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		console.log('enviando formulario', formData)
-		//lógica para enviar al back el formulario
+
+		try {
+			const response = await axios.post('http://localhost:3000/api/v1/publications/save', formData)
+			console.log(response)
+		} catch (error) {
+			console.log(error)
+		}
 	}
 
 	const handleClear = () => {
