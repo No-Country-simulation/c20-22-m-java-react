@@ -2,6 +2,7 @@ package com.no.country.pet.rescue.dtos;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
