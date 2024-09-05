@@ -1,6 +1,5 @@
 package com.no.country.pet.rescue.services;
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
-import com.no.country.pet.rescue.entities.Publicacion;
 import java.util.List;
 
 public interface IPublicacionService {

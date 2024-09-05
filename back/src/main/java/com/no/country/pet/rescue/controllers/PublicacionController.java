@@ -1,7 +1,6 @@
 package com.no.country.pet.rescue.controllers;
 
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
-import com.no.country.pet.rescue.entities.Publicacion;
 import com.no.country.pet.rescue.services.IPublicacionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,5 @@
 package com.no.country.pet.rescue.entities;
 
-import com.no.country.pet.rescue.dtos.PublicacionDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
