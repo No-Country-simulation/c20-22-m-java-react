@@ -6,20 +6,20 @@ export default function Publishlost() {
 	const [images, setImages] = useState([])
 
 	const [formData, setFormData] = useState({
-		publicaDueño: true,
+		publica_duenio: true,
 		rescatada: false,
-		nombre: '',
-		fechaPerdida: '',
+		mascota_nombre: '',
+		fecha: '',
 		zona: '',
-		mascotaEspecie: '',
-		mascotaRaza: '',
-		mascotaColores: [],
-		mascotaTamaño: '',
-		mascotaEdad: '',
-		mascotaOtros: '',
-		contactoNombre: '',
-		contactoTelefono: '',
-		contactoEmail: '',
+		mascota_especie: '',
+		mascota_raza: '',
+		mascota_colores: [],
+		mascota_tamanio: '',
+		mascota_edad: '',
+		mascota_descripcion: '',
+		usuario_nombre: '',
+		usuario_telefono: '',
+		usuario_email: '',
 		fotos: []
 	})
 
@@ -52,8 +52,8 @@ export default function Publishlost() {
 	const handleChange = (e) => {
 		const { name, value } = e.target
 
-		// Convertir el string en un array de colores si es el campo mascotaColores
-		if (name === 'mascotaColores') {
+		// Convertir el string en un array de colores si es el campo mascota_colores
+		if (name === 'mascota_colores') {
 			setFormData((prevFormData) => ({
 				...prevFormData,
 				[name]: value.split(',').map((color) => color.trim()) // Convertir en array y eliminar espacios
@@ -75,20 +75,20 @@ export default function Publishlost() {
 	const handleClear = () => {
 		setImages([])
 		setFormData({
-			publicaDueño: true,
+			publica_duenio: true,
 			rescatada: false,
-			nombre: '',
-			fechaPerdida: '',
+			mascota_nombre: '',
+			fecha: '',
 			zona: '',
-			mascotaEspecie: '',
-			mascotaRaza: '',
-			mascotaColores: [],
-			mascotaTamaño: '',
-			mascotaEdad: '',
-			mascotaOtros: '',
-			contactoNombre: '',
-			contactoTelefono: '',
-			contactoEmail: '',
+			mascota_especie: '',
+			mascota_raza: '',
+			mascota_colores: [],
+			mascota_tamanio: '',
+			mascota_edad: '',
+			mascota_descripcion: '',
+			usuario_nombre: '',
+			usuario_telefono: '',
+			usuario_email: '',
 			fotos: []
 		})
 		console.log('formulario borrado')
@@ -100,45 +100,54 @@ export default function Publishlost() {
 			<h4 className={styles.subtitle}>Completá el formulario y la gente te ayudará a encontrarlo</h4>
 			<div className={styles.formContainer}>
 				<form onSubmit={handleSubmit} className={styles.form}>
-					<label htmlFor='nombre' className={styles.label}>
+					<label htmlFor='mascota_nombre' className={styles.label}>
 						Nombre
 					</label>
-					<input type='text' name='nombre' id='nombre' placeholder='Ej: Buddy' className={styles.input} onChange={handleChange} required value={formData.nombre} />
-					<label htmlFor='fechaPerdida'>Fecha que se perdió</label>
-					<input type='date' name='fechaPerdida' id='fechaPerdida' className={styles.input} onChange={handleChange} required value={formData.fechaPerdida} />
+					<input type='text' name='mascota_nombre' id='mascota_nombre' placeholder='Ej: Buddy' className={styles.input} onChange={handleChange} required value={formData.mascota_nombre} />
+					<label htmlFor='fecha'>Fecha que se perdió</label>
+					<input type='date' name='fecha' id='fecha' className={styles.input} onChange={handleChange} required value={formData.fecha} />
 					<label htmlFor='zona'>Zona / Barrio en que se perdió la mascota</label>
 					<input type='text' name='zona' id='zona' placeholder='Ej: Quilmes' className={styles.input} onChange={handleChange} required value={formData.zona} />
-					<label htmlFor='mascotaEspecie'>Tipo de mascota</label>
-					<select name='mascotaEspecie' id='mascotaEspecie' className={styles.input} onChange={handleChange} required value={formData.mascotaEspecie}>
+					<label htmlFor='mascota_especie'>Tipo de mascota</label>
+					<select name='mascota_especie' id='mascota_especie' className={styles.input} onChange={handleChange} required value={formData.mascota_especie}>
 						<option value=''>Selecciona la especie</option> {/* Opción por defecto */}
 						<option value='Perro'>Perro</option>
 						<option value='Gato'>Gato</option>
 					</select>
-					<label htmlFor='mascotaRaza'>Raza de la mascota</label>
-					<input type='text' name='mascotaRaza' id='mascotaRaza' placeholder='Ej: Caniche / Mixto' className={styles.input} onChange={handleChange} required value={formData.mascotaRaza} />
-					<label htmlFor='mascotaColores' className={styles.label}>
+					<label htmlFor='mascota_raza'>Raza de la mascota</label>
+					<input type='text' name='mascota_raza' id='mascota_raza' placeholder='Ej: Caniche / Mixto' className={styles.input} onChange={handleChange} required value={formData.mascota_raza} />
+					<label htmlFor='mascota_colores' className={styles.label}>
 						Colores de la mascota, separados por coma y en orden de importancia
 					</label>
-					<input type='text' name='mascotaColores' id='mascotaColores' placeholder='Negro, Marron, Blanco' className={styles.input} onChange={handleChange} required value={formData.mascotaColores} />
-					<label htmlFor='mascotaTamaño'>Tamaño de la mascota</label>
-					<select name='mascotaTamaño' id='mascotaTamaño' className={styles.input} onChange={handleChange} required value={formData.mascotaTamaño}>
+					<input
+						type='text'
+						name='mascota_colores'
+						id='mascota_colores'
+						placeholder='Negro, Marron, Blanco'
+						className={styles.input}
+						onChange={handleChange}
+						required
+						value={formData.mascota_colores}
+					/>
+					<label htmlFor='mascota_tamanio'>Tamaño de la mascota</label>
+					<select name='mascota_tamanio' id='mascota_tamanio' className={styles.input} onChange={handleChange} required value={formData.mascota_tamanio}>
 						<option value=''>Selecciona el tamaño</option> {/* Opción por defecto */}
 						<option value='Pequeña'>Pequeña</option>
 						<option value='Mediana'>Mediana</option>
 						<option value='Grande'>Grande</option>
 					</select>
 
-					<label htmlFor='mascotaEdad'>Edad de la mascota</label>
-					<input type='number' name='mascotaEdad' id='mascotaEdad' placeholder='Ej: 3' className={styles.input} onChange={handleChange} required value={formData.mascotaEdad} />
-					<label htmlFor='mascotaOtros'>Otros datos de la mascota</label>
+					<label htmlFor='mascota_edad'>Edad de la mascota</label>
+					<input type='number' name='mascota_edad' id='mascota_edad' placeholder='Ej: 3' className={styles.input} onChange={handleChange} required value={formData.mascota_edad} />
+					<label htmlFor='mascota_descripcion'>Otros datos de la mascota</label>
 					<textarea
-						name='mascotaOtros'
-						id='mascotaOtros'
+						name='mascota_descripcion'
+						id='mascota_descripcion'
 						placeholder='Ej: Tenía collar color negro.. responde al nombre.. tiene chip..'
 						className={styles.input}
 						onChange={handleChange}
 						required
-						value={formData.mascotaOtros}
+						value={formData.mascota_descripcion}
 						rows={4}
 					/>
 
@@ -148,21 +157,21 @@ export default function Publishlost() {
 						<img key={index} src={img} alt={`mascota ${index}`} width={100} height={100} />
 					))}
 
-					<label htmlFor='contactoNombre'>Nombre de contacto</label>
-					<input type='text' name='contactoNombre' id='contactoNombre' placeholder='Ej: Juan' className={styles.input} onChange={handleChange} required value={formData.contactoNombre} />
-					<label htmlFor='contactoTelefono'>Teléfono de contacto, sin espacios</label>
+					<label htmlFor='usuario_nombre'>Nombre de contacto</label>
+					<input type='text' name='usuario_nombre' id='usuario_nombre' placeholder='Ej: Juan' className={styles.input} onChange={handleChange} required value={formData.usuario_nombre} />
+					<label htmlFor='usuario_telefono'>Teléfono de contacto, sin espacios</label>
 					<input
 						type='text'
-						name='contactoTelefono'
-						id='contactoTelefono'
+						name='usuario_telefono'
+						id='usuario_telefono'
 						placeholder='Ej: +5491112345678'
 						className={styles.input}
 						onChange={handleChange}
 						required
-						value={formData.contactoTelefono}
+						value={formData.usuario_telefono}
 					/>
-					<label htmlFor='contactoEmail'>Email de contacto</label>
-					<input type='email' name='contactoEmail' id='contactoEmail' placeholder='Ej: mail@example.com' className={styles.input} onChange={handleChange} required value={formData.contactoEmail} />
+					<label htmlFor='usuario_email'>Email de contacto</label>
+					<input type='email' name='usuario_email' id='usuario_email' placeholder='Ej: mail@example.com' className={styles.input} onChange={handleChange} required value={formData.usuario_email} />
 
 					<div className={styles.buttonContainer}>
 						<button className={styles.buttonClear} onClick={handleClear}>

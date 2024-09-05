@@ -23,9 +23,9 @@ function Home() {
 	// Filtrar segun la categoria seleccionada
 	const mascotasFiltradas = publicaciones.filter((publicacion) => {
 		if (filtro === 'dueños') {
-			return publicacion.publicaDueño && !publicacion.rescatada
+			return publicacion.publica_duenio && !publicacion.rescatada
 		} else if (filtro === 'otros') {
-			return !publicacion.publicaDueño && !publicacion.rescatada
+			return !publicacion.publica_duenio && !publicacion.rescatada
 		} else if (filtro === 'rescatadas') {
 			return publicacion.rescatada
 		}
