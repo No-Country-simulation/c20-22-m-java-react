@@ -35,7 +35,7 @@ public class PublicacionServiceImp implements IPublicacionService {
     @Override
     public PublicacionDTO findById(String idPublicacion) {
         Optional<Publicacion> publicacion = publicacionRepository.findById(idPublicacion);
-
+return null;
     }
 
     @Override
