@@ -18,12 +18,12 @@ public class Publicacion {
     private String usuarioNombre;
     private String usuarioEmail;
     private Integer usuarioTelefono;
-    private String mascota_nombre;
-    private String mascota_especie;
-    private String mascota_raza;
-    private List<String> mascota_colores;
+    private String mascotaNombre;
+    private String mascotaEspecie;
+    private String mascotaRaza;
+    private List<String> mascotaColores;
     private String mascotaTamanio;
-    private String mascota_edad;
+    private String mascotaEdad;
     private String mascotaDescripcion;
     private String fecha;
     private String zona;
@@ -31,16 +31,16 @@ public class Publicacion {
     private Boolean publicaDuenio;
     private Boolean rescatada;
 
-    public Publicacion(String usuarioNombre, String usuarioEmail, Integer usuarioTelefono, String mascota_nombre, String mascota_especie, String mascota_raza, List<String> mascota_colores, String mascotaTamanio, String mascota_edad, String mascotaDescripcion, String fecha, String zona, List<String> fotos, Boolean publicaDuenio, Boolean rescatada) {
+    public Publicacion(String usuarioNombre, String usuarioEmail, Integer usuarioTelefono, String mascotaNombre, String mascotaEspecie, String mascotaRaza, List<String> mascotaColores, String mascotaTamanio, String mascotaEdad, String mascotaDescripcion, String fecha, String zona, List<String> fotos, Boolean publicaDuenio, Boolean rescatada) {
         this.usuarioNombre = usuarioNombre;
         this.usuarioEmail = usuarioEmail;
         this.usuarioTelefono = usuarioTelefono;
-        this.mascota_nombre = mascota_nombre;
-        this.mascota_especie = mascota_especie;
-        this.mascota_raza = mascota_raza;
-        this.mascota_colores = mascota_colores;
+        this.mascotaNombre = mascotaNombre;
+        this.mascotaEspecie = mascotaEspecie;
+        this.mascotaRaza = mascotaRaza;
+        this.mascotaColores = mascotaColores;
         this.mascotaTamanio = mascotaTamanio;
-        this.mascota_edad = mascota_edad;
+        this.mascotaEdad = mascotaEdad;
         this.mascotaDescripcion = mascotaDescripcion;
         this.fecha = fecha;
         this.zona = zona;
