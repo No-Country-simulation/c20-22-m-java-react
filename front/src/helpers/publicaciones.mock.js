@@ -2,6 +2,7 @@
 export const publicaciones = [
 	{
 		//publicacion tipo para cuando un dueño reporta a su mascota como perdida
+		id: "asdasdasdsad",
 		contactoEmail: 'gagotlib@mail.com',
 		contactoNombre: 'gabriel',
 		contactoTelefono: '+491601100010',
@@ -20,6 +21,7 @@ export const publicaciones = [
 	},
 	{
 		//publicacion tipo para cuando un dueño reporta a su mascota como perdida
+				id: "asdasdas234234",
 		contactoEmail: 'gagotlib@mail.com',
 		contactoNombre: 'gabriel',
 		contactoTelefono: '+491601100010',
@@ -38,6 +40,7 @@ export const publicaciones = [
 	},
 	{
     //publicacion tipo para cuando una persona encuentra un mascota en la calle
+				id: "a3452345345sdasdsad",
 		contactoEmail: 'gagotlib@mail.com',
 		contactoNombre: 'gabriel',
 		contactoTelefono: '+491601100010',
@@ -57,6 +60,7 @@ export const publicaciones = [
 
 	{
 		//publicacion tipo para cuando una persona encuentra un mascota en la calle
+				id: "asdasdas6666",
 			contactoEmail: 'gagotlib@mail.com',
 			contactoNombre: 'gabriel',
 			contactoTelefono: '+491601100010',
