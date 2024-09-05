@@ -18,4 +18,4 @@
 ---
 
 ### ✅ Publicacion
->**POST-Guardar:** `localhost:3000/api/v1/publicacion/guardar`
+>**POST-Save:** `localhost:3000/api/v1/publicacion/guardar`
