@@ -1,10 +1,12 @@
 import  { useState } from 'react'
 import styles from './Tarjeta.module.css';
+import { Link } from 'react-router-dom';
 
 const Tarjeta = ({ fotos, nombre, direccion, genero, edad }) => {
   const imagen = fotos.length > 0 ? fotos[0] : '/perro.jpg'; // Imagen por defecto si no hay fotos
 
   return (
+    <Link to={'/detail'}>
     <div className={styles.tarjeta}>
       <img src={imagen} alt={nombre} className={styles.foto} />
       <div className={styles.info}>
@@ -14,6 +16,7 @@ const Tarjeta = ({ fotos, nombre, direccion, genero, edad }) => {
         <p className={styles.edad}><strong>Edad:</strong> {edad} años</p>
       </div>
     </div>
+    </Link>
   );
 };
 
