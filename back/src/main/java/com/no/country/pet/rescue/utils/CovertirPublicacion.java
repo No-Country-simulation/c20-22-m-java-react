@@ -44,4 +44,11 @@ public class CovertirPublicacion {
                 publicacion.rescatada()
         );
     }
+
+    public static Publicacion updateUsuario(Publicacion publicacion, PublicacionDTO publicacionDTO){
+        publicacion.setUsuarioNombre(publicacionDTO.usuarioNombre());
+        publicacion.setUsuarioEmail(publicacionDTO.usuarioEmail());
+        publicacion.setUsuarioTelefono(publicacionDTO.usuarioTelefono());
+        return publicacion;
+    }
 }

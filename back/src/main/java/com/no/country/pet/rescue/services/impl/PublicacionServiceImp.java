@@ -8,6 +8,7 @@ import com.no.country.pet.rescue.utils.CovertirPublicacion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,13 +30,28 @@ public class PublicacionServiceImp implements IPublicacionService {
 
     @Override
     public List<PublicacionDTO> obtenerTodo() {
-        return null;
+        List<Publicacion> publicaciones = publicacionRepository.findAll();
+        List<PublicacionDTO> publicacionesDTO = new ArrayList<>();
+        for(Publicacion publicacion: publicaciones){
+            publicacionesDTO.add(CovertirPublicacion.publicacionToPublicacionDTO(publicacion));
+        }
+        return publicacionesDTO;
     }
 
     @Override
     public PublicacionDTO findById(String idPublicacion) {
         Optional<Publicacion> publicacion = publicacionRepository.findById(idPublicacion);
 return null;
+    }
+
+    @Override
+    public PublicacionDTO update(String idPublicacion, PublicacionDTO publicacionDTO){
+        Optional<Publicacion> publicacionOptional = publicacionRepository.findById(idPublicacion);
+        if (publicacionOptional.isPresent()){
+            Publicacion publicacionUpdated = CovertirPublicacion.updateUsuario(publicacionOptional.get(),publicacionDTO);
+            return CovertirPublicacion.publicacionToPublicacionDTO(publicacionUpdated);
+        }else
+            return null;
     }
 
     @Override
