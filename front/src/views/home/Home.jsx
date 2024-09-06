@@ -1,11 +1,21 @@
 // import React from 'react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './Home.module.css'
 import ListaDeTarjetas from '../../components/tarjeta/ListaDeTarjetas'
 import { publicaciones } from '../../helpers/publicaciones.mock'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 function Home() {
+	useEffect(() => {
+		const fetchData = async () => {
+			const response = await axios.get('http://localhost:3000/api/v1/publications/all')
+			console.log(response.data)
+		}
+
+		fetchData()
+	}, [])
+
 	// const posteos = axios.get(rutaasdasdasd/posts)
 
 	/*	//lista iterada de animales
@@ -33,7 +43,7 @@ function Home() {
 	})
 
 	return (
-		<main>
+		<main className={styles.main}>
 			<div className={styles.container}>
 				<h1 className={styles.title}>Bienvenido a Pet Rescue!</h1>
 				<p className={styles.subtitle}>¡Tu comunidad para reunir mascotas perdidas y encontradas! </p>
