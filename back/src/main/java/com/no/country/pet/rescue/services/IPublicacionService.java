@@ -6,5 +6,5 @@ public interface IPublicacionService {
     PublicacionDTO save(PublicacionDTO publicacion);
     List<PublicacionDTO> obtenerTodo();
     PublicacionDTO findById(String idPublicacion);
-    String borrarPorId(String idPublicacion);
+    String deleteById(String idPublicacion);
 }

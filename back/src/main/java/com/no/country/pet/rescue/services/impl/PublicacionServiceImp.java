@@ -39,7 +39,7 @@ return null;
     }
 
     @Override
-    public String borrarPorId(String idPublicacion) {
+    public String deleteById(String idPublicacion) {
         publicacionRepository.deleteById(idPublicacion);
         return "User id: "+idPublicacion+" deleted";
     }

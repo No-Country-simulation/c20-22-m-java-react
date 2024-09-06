@@ -19,4 +19,9 @@ public class PublicacionController {
     public ResponseEntity<PublicacionDTO> save(@RequestBody PublicacionDTO publicacion){
         return new ResponseEntity<>(publicacionService.save(publicacion), HttpStatus.OK);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> delete(@PathVariable String id){
+        return new ResponseEntity<>(publicacionService.deleteById(id), HttpStatus.OK);
+    }
 }
