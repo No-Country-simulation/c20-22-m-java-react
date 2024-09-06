@@ -18,4 +18,10 @@
 ---
 
 ### ✅ Publicacion
->**POST-Save:** `http://localhost:3000/api/v1/publications/save`
+>**GET:** `http://localhost:3000/api/v1/publications/all`
+
+>**POST:** `http://localhost:3000/api/v1/publications/save`
+
+>**PUT:** `http://localhost:3000/api/v1/publications/update/{id}` (EN MANTENIMIENTO)
+
+>**DELETE:** `http://localhost:3000/api/v1/publications/delete/{id}`
