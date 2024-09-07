@@ -48,7 +48,8 @@ return null;
     public PublicacionDTO update(String idPublicacion, PublicacionDTO publicacionDTO){
         Optional<Publicacion> publicacionOptional = publicacionRepository.findById(idPublicacion);
         if (publicacionOptional.isPresent()){
-            Publicacion publicacionUpdated = CovertirPublicacion.updateUsuario(publicacionOptional.get(),publicacionDTO);
+            Publicacion publicacionUpdated = CovertirPublicacion.updatePublicacion(publicacionOptional.get(),publicacionDTO);
+            publicacionRepository.save(publicacionUpdated);
             return CovertirPublicacion.publicacionToPublicacionDTO(publicacionUpdated);
         }else
             return null;

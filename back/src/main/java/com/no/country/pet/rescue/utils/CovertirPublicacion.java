@@ -45,10 +45,66 @@ public class CovertirPublicacion {
         );
     }
 
-    public static Publicacion updateUsuario(Publicacion publicacion, PublicacionDTO publicacionDTO){
-        publicacion.setUsuarioNombre(publicacionDTO.usuarioNombre());
-        publicacion.setUsuarioEmail(publicacionDTO.usuarioEmail());
-        publicacion.setUsuarioTelefono(publicacionDTO.usuarioTelefono());
+    /**Actualiza los datos de una publicacion*/
+    public static Publicacion updatePublicacion(Publicacion publicacion, PublicacionDTO publicacionDTO){
+        Publicacion publicacionUpdated = new Publicacion();
+        updateUsuario(publicacion,publicacionDTO);
+        updateMascota(publicacion,publicacionDTO);
+        updateInfo(publicacion,publicacionDTO);
         return publicacion;
+    }
+
+    /**Actualiza los datos del usuario de la publicacion.*/
+    private static void updateUsuario(Publicacion publicacion, PublicacionDTO publicacionDTO){
+        if(publicacionDTO.usuarioNombre()!=null)
+            publicacion.setUsuarioNombre(publicacionDTO.usuarioNombre());
+
+        if(publicacionDTO.usuarioEmail()!=null)
+            publicacion.setUsuarioEmail(publicacionDTO.usuarioEmail());
+
+        if(publicacionDTO.usuarioTelefono()!=null)
+            publicacion.setUsuarioTelefono(publicacionDTO.usuarioTelefono());
+    }
+
+    /**Actualiza los datos de la mascota de la publicacion.*/
+    private static void updateMascota(Publicacion publicacion, PublicacionDTO publicacionDTO){
+        if(publicacionDTO.mascotaNombre()!=null)
+            publicacion.setMascotaNombre(publicacionDTO.mascotaNombre());
+
+        if(publicacionDTO.mascotaEspecie()!=null)
+            publicacion.setMascotaEspecie(publicacionDTO.mascotaEspecie());
+
+        if(publicacionDTO.mascotaRaza()!=null)
+            publicacion.setMascotaRaza(publicacionDTO.mascotaRaza());
+
+        if(publicacionDTO.mascotaColores()!=null)
+            publicacion.setMascotaColores(publicacionDTO.mascotaColores());
+
+        if(publicacionDTO.mascotaTamanio()!=null)
+            publicacion.setMascotaTamanio(publicacionDTO.mascotaTamanio());
+
+        if(publicacionDTO.mascotaEdad()!=null)
+            publicacion.setMascotaEdad(publicacionDTO.mascotaEdad());
+
+        if(publicacionDTO.mascotaDescripcion()!=null)
+            publicacion.setMascotaDescripcion(publicacionDTO.mascotaDescripcion());
+    }
+
+    /**Actualiza informacion extra de la publicacion.*/
+    private static void updateInfo(Publicacion publicacion, PublicacionDTO publicacionDTO){
+        if(publicacionDTO.fecha()!=null)
+            publicacion.setFecha(publicacionDTO.fecha());
+
+        if(publicacionDTO.zona()!=null)
+            publicacion.setZona(publicacionDTO.zona());
+
+        if(publicacionDTO.fotos()!=null)//REVISAR
+            publicacion.setFotos(publicacionDTO.fotos());
+
+        if(publicacionDTO.publicaDuenio()!=null)
+            publicacion.setPublicaDuenio(publicacionDTO.publicaDuenio());
+
+        if(publicacionDTO.rescatada()!=null)
+            publicacion.setRescatada(publicacionDTO.rescatada());
     }
 }

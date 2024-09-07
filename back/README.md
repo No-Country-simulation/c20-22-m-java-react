@@ -22,6 +22,6 @@
 
 >**POST:** `http://localhost:3000/api/v1/publications/save`
 
->**PUT:** `http://localhost:3000/api/v1/publications/update/{id}` (EN MANTENIMIENTO)
+>**PUT:** `http://localhost:3000/api/v1/publications/update/{id}`
 
 >**DELETE:** `http://localhost:3000/api/v1/publications/delete/{id}`
