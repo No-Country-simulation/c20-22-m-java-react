@@ -29,7 +29,7 @@ public class PublicacionServiceImp implements IPublicacionService {
     }
 
     @Override
-    public List<PublicacionDTO> obtenerTodo() {
+    public List<PublicacionDTO> getAll() {
         List<Publicacion> publicaciones = publicacionRepository.findAll();
         List<PublicacionDTO> publicacionesDTO = new ArrayList<>();
         for(Publicacion publicacion: publicaciones){
@@ -39,9 +39,12 @@ public class PublicacionServiceImp implements IPublicacionService {
     }
 
     @Override
-    public PublicacionDTO findById(String idPublicacion) {
-        Optional<Publicacion> publicacion = publicacionRepository.findById(idPublicacion);
-return null;
+    public PublicacionDTO findById(String id) {
+
+        Publicacion publicacion = publicacionRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("La publicacion con ID : " + id + " no existe"));
+
+        return CovertirPublicacion.publicacionToPublicacionDTO(publicacion);
     }
 
     @Override
