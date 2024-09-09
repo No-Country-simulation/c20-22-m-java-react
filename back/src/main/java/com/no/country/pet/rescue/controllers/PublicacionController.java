@@ -26,13 +26,12 @@ public class PublicacionController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<PublicacionDTO>> all(){
+    public ResponseEntity<List<PublicacionDTO>> all() {
         return new ResponseEntity<>(publicacionService.getAll(), HttpStatus.OK);
     }
 
     @GetMapping("/findById/{id}")
     public ResponseEntity<PublicacionDTO> findById(@PathVariable String id) {
-        logger.info("Publicacion con id: {} no existe.", id);
         return new ResponseEntity<>(publicacionService.findById(id), HttpStatus.FOUND);
     }
 
