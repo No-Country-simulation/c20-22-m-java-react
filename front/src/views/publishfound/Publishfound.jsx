@@ -2,8 +2,12 @@
 import { useState } from 'react'
 import styles from './Publishfound.module.css'
 import axios from 'axios'
+import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
 
 export default function Publishfound() {
+	const navigate = useNavigate()
+	const [errors, setErrors] = useState([])
 	const [images, setImages] = useState([])
 	const [formData, setFormData] = useState({
 		publica_duenio: false,
@@ -48,7 +52,12 @@ export default function Publishfound() {
 	const handleChange = (e) => {
 		const { name, value } = e.target
 
-		// Convertir el string en un array de colores si es el campo mascota_colores
+		if (name === 'mascota_nombre' || name === 'usuario_nombre' || name === 'zona') {
+			setFormData((prevFormData) => ({
+				...prevFormData,
+				[name]: capitalizeWords(value) // Aplica la función de formato
+			}))
+		}
 		if (name === 'mascota_colores') {
 			setFormData((prevFormData) => ({
 				...prevFormData,
@@ -61,21 +70,96 @@ export default function Publishfound() {
 			}))
 		}
 	}
+	function capitalizeFirstLetter(text) {
+		return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+	}
+	function capitalizeWords(str) {
+		return str
+			.split(',')
+			.map((word) => word.trim().charAt(0).toUpperCase() + word.trim().slice(1).toLowerCase())
+			.join(', ')
+	}
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
+		setErrors([])
+		formData.usuario_nombre = capitalizeFirstLetter(formData.usuario_nombre)
+		formData.zona = capitalizeFirstLetter(formData.zona)
 		console.log('enviando formulario', formData)
+				const validationErrors = []
+				const fechaIngresada = new Date(formData.fecha)
+				const fechaActual = new Date()
+				if (fechaIngresada > fechaActual) {
+					validationErrors.push('La fecha no puede ser futura.')
+				} else {
+					// Convertir la fecha a string si es válida
+					formData.fecha = fechaIngresada.toISOString().split('T')[0] // Formato YYYY-MM-DD
+				}
+
+				if (!formData.zona.trim()) {
+					validationErrors.push('Debes ingresar la zona donde se perdió la mascota.')
+				}
+
+				if (!formData.mascota_especie) {
+					validationErrors.push('Debes seleccionar el tipo de mascota.')
+				}
+
+				if (!formData.mascota_raza.trim()) {
+					validationErrors.push('Debes ingresar la raza de la mascota.')
+				}
+
+				if (!formData.mascota_colores.length) {
+					validationErrors.push('Debes ingresar al menos un color de la mascota.')
+				}
+
+				if (!formData.mascota_tamanio) {
+					validationErrors.push('Debes seleccionar el tamaño de la mascota.')
+				}
+
+				if (!/^\+?\d{10,15}$/.test(formData.usuario_telefono)) {
+					validationErrors.push('Debes ingresar un número de teléfono válido.')
+				}
+
+				if (!/\S+@\S+\.\S+/.test(formData.usuario_email)) {
+					validationErrors.push('Debes ingresar un correo electrónico válido.')
+				}
+
+				if (!formData.fotos.length) {
+					validationErrors.push('Debes subir al menos una foto de la mascota.')
+				}
+
+				// Si hay errores, actualizamos el estado de los errores y detenemos el envío
+				if (validationErrors.length > 0) {
+					setErrors(validationErrors)
+					return
+				}
 		try {
 			const response = await axios.post('http://localhost:3000/api/v1/publications/save', formData)
 			console.log(response)
+			Swal.fire({
+				title: '<strong>Publicación exitosa</strong>',
+				icon: 'info',
+				showCloseButton: true,
+				showCancelButton: false,
+				focusConfirm: false,
+				confirmButtonText: `
+              Salir
+            `,
+				confirmButtonAriaLabel: 'Thumbs up, great!',
+				text: `Veras la publicación en el sector correspondiente`,
+
+				willClose: () => {
+					navigate('/')
+				}
+			})
 		} catch (error) {
 			console.log(error)
 		}
-
 	}
 
 	const handleClear = () => {
 		setImages([])
+			setErrors([])
 		setFormData({
 			publica_duenio: false,
 			rescatada: false,
@@ -180,6 +264,16 @@ export default function Publishfound() {
 						</button>
 					</div>
 				</form>
+				{errors.length > 0 && (
+					<div className={styles.errorContainer}>
+						<h4>Errores en el formulario:</h4>
+						<ul>
+							{errors.map((error, index) => (
+								<li key={index}>{error}</li>
+							))}
+						</ul>
+					</div>
+				)}
 			</div>
 		</section>
 	)
