@@ -20,6 +20,8 @@
 ### ✅ Publicacion
 >**GET:** `http://localhost:3000/api/v1/publications/all`
 
+>**GET:** `http://localhost:3000/api/v1/publications/findById/{id}`
+
 >**POST:** `http://localhost:3000/api/v1/publications/save`
 
 >**PUT:** `http://localhost:3000/api/v1/publications/update/{id}`
