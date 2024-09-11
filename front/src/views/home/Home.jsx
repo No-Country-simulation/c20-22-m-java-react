@@ -2,31 +2,23 @@
 import { useEffect, useState } from 'react'
 import styles from './Home.module.css'
 import ListaDeTarjetas from '../../components/tarjeta/ListaDeTarjetas'
-import { publicaciones } from '../../helpers/publicaciones.mock'
+// import { publicaciones } from '../../helpers/publicaciones.mock'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 function Home() {
+	const [publicaciones, setPublicaciones] = useState([])
 	useEffect(() => {
 		const fetchData = async () => {
 			const response = await axios.get('http://localhost:3000/api/v1/publications/all')
 			console.log(response.data)
+			setPublicaciones(response.data)
 		}
 
 		fetchData()
 	}, [])
 
-	// const posteos = axios.get(rutaasdasdasd/posts)
 
-	/*	//lista iterada de animales
-	const animales = Array.from({ length: 10 }, () => ({
-		foto: '/perro.jpg',
-		nombre: 'Dubi',
-		direccion: 'Calle 123, Encarnacion',
-		genero: 'Macho',
-		edad: '5 años'
-	}))
-*/
 	// Estado para manejar la categoria seleccionada
 	const [filtro, setFiltro] = useState('dueños')
 
