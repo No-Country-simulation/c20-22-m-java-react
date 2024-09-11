@@ -34,7 +34,7 @@ public class PublicacionController {
 
     @GetMapping("/findById/{id}")
     public ResponseEntity<PublicacionDTO> findById(@PathVariable String id) {
-        return new ResponseEntity<>(publicacionService.findById(id), HttpStatus.FOUND);
+        return new ResponseEntity<>(publicacionService.findById(id), HttpStatus.OK);
     }
 
     @PutMapping("/update/{id}")
