@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Tarjeta = ({ publicacion }) => {
 
+console.log(publicacion);
 
   
   return (
-		<Link to={`/detail/${publicacion.id}`} className={styles.tarjeta}>
+		<Link to={`/detail/${publicacion._id}`} className={styles.tarjeta}>
 			<img src={publicacion.fotos[0]} alt={publicacion.mascota_nombre} className={styles.foto} />
 			<div className={styles.info}>
 				<h2 className={styles.nombre}>{publicacion.mascota_nombre}</h2>

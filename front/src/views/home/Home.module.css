@@ -114,12 +114,35 @@
 }
 
 .filterContainer {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 	margin: 20px 20px;
-	width: 100%;
-	text-align: center;
+}
+
+.filterButton {
+  background-color: var(--color-secundario);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 1s ease;
+	font-size: larger;
+}
+
+.filterButton:hover {
+  background-color: #ccc;
+}
+
+.filterButton.active {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+}
+
+.filterButton:focus {
+  outline: none;
 }
 
 .selectFiltro {
@@ -139,6 +162,7 @@
 
 h2 {
 	color: var(--color-secundario);
+	text-align: center;
 }
 .tarjetasContainer {
 	padding: 0.5rem 1rem;
