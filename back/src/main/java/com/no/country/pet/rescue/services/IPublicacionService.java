@@ -8,4 +8,7 @@ public interface IPublicacionService {
     PublicacionDTO findById(String idPublicacion);
     PublicacionDTO update(String idPublicacion, PublicacionDTO publicacionDTO);
     String deleteById(String idPublicacion);
+    List<PublicacionDTO> getAllOwnerPublishes();
+    List<PublicacionDTO> getAllOwnerNonPublishes();
+    List<PublicacionDTO> getAllRescuedPets();
 }

@@ -22,6 +22,12 @@
 
 >**GET:** `http://localhost:3000/api/v1/publications/findById/{id}`
 
+>**GET:** `http://localhost:3000/api/v1/publications/allOwnerPublishes`
+ 
+>**GET:** `http://localhost:3000/api/v1/publications/allOwnerNonPublishes`
+
+>**GET:** `http://localhost:3000/api/v1/publications/allRescuedPets`
+
 >**POST:** `http://localhost:3000/api/v1/publications/save`
 
 >**PUT:** `http://localhost:3000/api/v1/publications/update/{id}`
