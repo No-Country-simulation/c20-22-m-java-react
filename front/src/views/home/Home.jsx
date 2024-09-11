@@ -5,14 +5,19 @@ import ListaDeTarjetas from '../../components/tarjeta/ListaDeTarjetas'
 // import { publicaciones } from '../../helpers/publicaciones.mock'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import Spiner from '../../components/spiner/Spiner'
+import { BASE_URL } from '../../envs'
 
 function Home() {
 	const [publicaciones, setPublicaciones] = useState([])
+	const [isLoading, setIsLoading] = useState(true)
+
 	useEffect(() => {
 		const fetchData = async () => {
-			const response = await axios.get('http://localhost:3000/api/v1/publications/all')
+			const response = await axios.get(`${BASE_URL}/all`)
 			console.log(response.data)
 			setPublicaciones(response.data)
+			setIsLoading(false)
 		}
 
 		fetchData()
@@ -70,11 +75,11 @@ function Home() {
 					{filtro === 'dueños' && 'Ayudanos a encontrar a estas mascotas '}
 					{filtro === 'otros' && 'Estas mascotas estan buscando a sus dueños'}
 				</h2>
-				<ListaDeTarjetas publicacions={mascotasFiltradas} />
+				{isLoading ? <Spiner /> : <ListaDeTarjetas publicacions={mascotasFiltradas} />}
 			</div>
 			<div className={styles.tarjetasContainer}>
-				<h2>Estas mascotas se reencontraron con sus dueños!</h2>
-				<ListaDeTarjetas publicacions={mascotasEncontradas} />
+				<h2>Estas mascotas se reencontraron con sus dueños gracias a Pet Rescue!</h2>
+				{isLoading ? <Spiner /> : <ListaDeTarjetas publicacions={mascotasEncontradas} />}
 			</div>
 		</main>
 	)
