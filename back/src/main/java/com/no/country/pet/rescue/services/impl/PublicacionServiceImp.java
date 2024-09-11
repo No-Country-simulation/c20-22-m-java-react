@@ -4,7 +4,7 @@ import com.no.country.pet.rescue.dtos.PublicacionDTO;
 import com.no.country.pet.rescue.entities.Publicacion;
 import com.no.country.pet.rescue.repositories.PublicacionRepository;
 import com.no.country.pet.rescue.services.IPublicacionService;
-import com.no.country.pet.rescue.utils.CovertirPublicacion;
+import com.no.country.pet.rescue.utils.ConvertirPublicacion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ public class PublicacionServiceImp implements IPublicacionService {
     @Override
     public PublicacionDTO save(PublicacionDTO publicacion) {
 
-        Publicacion publicacionToSave = CovertirPublicacion.publicacionDTOToPublicacion(publicacion);
+        Publicacion publicacionToSave = ConvertirPublicacion.publicacionDTOToPublicacion(publicacion);
 
         publicacionRepository.save(publicacionToSave);
 
@@ -33,7 +33,7 @@ public class PublicacionServiceImp implements IPublicacionService {
         List<Publicacion> publicaciones = publicacionRepository.findAll();
         List<PublicacionDTO> publicacionesDTO = new ArrayList<>();
         for(Publicacion publicacion: publicaciones){
-            publicacionesDTO.add(CovertirPublicacion.publicacionToPublicacionDTO(publicacion));
+            publicacionesDTO.add(ConvertirPublicacion.publicacionToPublicacionDTO(publicacion));
         }
         return publicacionesDTO;
     }
@@ -44,16 +44,16 @@ public class PublicacionServiceImp implements IPublicacionService {
         Publicacion publicacion = publicacionRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("La publicacion con ID : " + id + " no existe"));
 
-        return CovertirPublicacion.publicacionToPublicacionDTO(publicacion);
+        return ConvertirPublicacion.publicacionToPublicacionDTO(publicacion);
     }
 
     @Override
     public PublicacionDTO update(String idPublicacion, PublicacionDTO publicacionDTO){
         Optional<Publicacion> publicacionOptional = publicacionRepository.findById(idPublicacion);
         if (publicacionOptional.isPresent()){
-            Publicacion publicacionUpdated = CovertirPublicacion.updatePublicacion(publicacionOptional.get(),publicacionDTO);
+            Publicacion publicacionUpdated = ConvertirPublicacion.updatePublicacion(publicacionOptional.get(),publicacionDTO);
             publicacionRepository.save(publicacionUpdated);
-            return CovertirPublicacion.publicacionToPublicacionDTO(publicacionUpdated);
+            return ConvertirPublicacion.publicacionToPublicacionDTO(publicacionUpdated);
         }else
             return null;
     }
@@ -61,6 +61,51 @@ public class PublicacionServiceImp implements IPublicacionService {
     @Override
     public String deleteById(String idPublicacion) {
         publicacionRepository.deleteById(idPublicacion);
-        return "User id: "+idPublicacion+" deleted";
+        return "User id: " + idPublicacion + " deleted";
+    }
+
+    @Override
+    public List<PublicacionDTO> getAllOwnerPublishes() {
+
+        List<Publicacion> publicaciones = publicacionRepository.findAll();
+        List<PublicacionDTO> publicacionesToReturn = new ArrayList<>();
+
+        for (Publicacion publicacion : publicaciones) {
+            if (publicacion.getPublicaDuenio() && !publicacion.getRescatada()) {
+                publicacionesToReturn.add(ConvertirPublicacion.publicacionToPublicacionDTO(publicacion));
+            }
+        }
+
+        return publicacionesToReturn;
+    }
+
+    @Override
+    public List<PublicacionDTO> getAllOwnerNonPublishes() {
+
+        List<Publicacion> publicaciones = publicacionRepository.findAll();
+        List<PublicacionDTO> publicacionesToReturn = new ArrayList<>();
+
+        for (Publicacion publicacion : publicaciones) {
+            if (!publicacion.getPublicaDuenio() && !publicacion.getRescatada()) {
+                publicacionesToReturn.add(ConvertirPublicacion.publicacionToPublicacionDTO(publicacion));
+            }
+        }
+
+        return publicacionesToReturn;
+    }
+
+    @Override
+    public List<PublicacionDTO> getAllRescuedPets() {
+
+        List<Publicacion> publicaciones = publicacionRepository.findAll();
+        List<PublicacionDTO> publicacionesToReturn = new ArrayList<>();
+
+        for (Publicacion publicacion : publicaciones) {
+            if (publicacion.getRescatada()) {
+                publicacionesToReturn.add(ConvertirPublicacion.publicacionToPublicacionDTO(publicacion));
+            }
+        }
+
+        return publicacionesToReturn;
     }
 }

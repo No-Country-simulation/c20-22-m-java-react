@@ -3,7 +3,7 @@ package com.no.country.pet.rescue.utils;
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
 import com.no.country.pet.rescue.entities.Publicacion;
 
-public class CovertirPublicacion {
+public class ConvertirPublicacion {
 
     public static PublicacionDTO publicacionToPublicacionDTO(Publicacion publicacion) {
         return new PublicacionDTO(

@@ -46,4 +46,19 @@ public class PublicacionController {
         logger.info("Publicacion con id: {} eliminada exitosamente.", id);
         return new ResponseEntity<>(publicacionService.deleteById(id), HttpStatus.OK);
     }
+
+    @GetMapping("/allOwnerPublishes")
+    public ResponseEntity<List<PublicacionDTO>> allOwnerPublishes() {
+        return new ResponseEntity<>(publicacionService.getAllOwnerPublishes(), HttpStatus.OK);
+    }
+
+    @GetMapping("/allOwnerNonPublishes")
+    public ResponseEntity<List<PublicacionDTO>> allOwnerNonPublishes() {
+        return new ResponseEntity<>(publicacionService.getAllOwnerNonPublishes(), HttpStatus.OK);
+    }
+
+    @GetMapping("/allRescuedPets")
+    public ResponseEntity<List<PublicacionDTO>> allRescuedPets() {
+        return new ResponseEntity<>(publicacionService.getAllRescuedPets(), HttpStatus.OK);
+    }
 }
