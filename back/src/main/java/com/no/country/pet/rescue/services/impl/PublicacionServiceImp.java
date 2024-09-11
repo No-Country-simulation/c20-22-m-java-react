@@ -1,6 +1,7 @@
 package com.no.country.pet.rescue.services.impl;
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
 import com.no.country.pet.rescue.entities.Publicacion;
+import com.no.country.pet.rescue.exceptions.PublicacionNotFoundException;
 import com.no.country.pet.rescue.repositories.PublicacionRepository;
 import com.no.country.pet.rescue.services.IPublicacionService;
 import com.no.country.pet.rescue.utils.ConvertirPublicacion;
@@ -40,7 +41,7 @@ public class PublicacionServiceImp implements IPublicacionService {
     public PublicacionDTO findById(String id) {
 
         Publicacion publicacion = publicacionRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("La publicacion con ID : " + id + " no existe"));
+                .orElseThrow(() -> new PublicacionNotFoundException("La publicacion con ID : " + id + " no existe"));
 
         return ConvertirPublicacion.publicacionToPublicacionDTO(publicacion);
     }
