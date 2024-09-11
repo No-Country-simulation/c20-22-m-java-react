@@ -1,12 +1,11 @@
 package com.no.country.pet.rescue.dtos;
-
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-
 import java.util.List;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public record PublicacionDTO(
+        String _id,
         String usuarioNombre,
         String usuarioEmail,
         Integer usuarioTelefono,

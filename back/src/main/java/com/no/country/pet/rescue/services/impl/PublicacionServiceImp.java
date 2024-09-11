@@ -1,5 +1,4 @@
 package com.no.country.pet.rescue.services.impl;
-
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
 import com.no.country.pet.rescue.entities.Publicacion;
 import com.no.country.pet.rescue.repositories.PublicacionRepository;
@@ -7,7 +6,6 @@ import com.no.country.pet.rescue.services.IPublicacionService;
 import com.no.country.pet.rescue.utils.ConvertirPublicacion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -29,13 +27,13 @@ public class PublicacionServiceImp implements IPublicacionService {
     }
 
     @Override
-    public List<Publicacion> getAll() {
+    public List<PublicacionDTO> getAll() {
         List<Publicacion> publicaciones = publicacionRepository.findAll();
         List<PublicacionDTO> publicacionesDTO = new ArrayList<>();
         for(Publicacion publicacion: publicaciones){
             publicacionesDTO.add(ConvertirPublicacion.publicacionToPublicacionDTO(publicacion));
         }
-        return publicaciones;
+        return publicacionesDTO;
     }
 
     @Override
