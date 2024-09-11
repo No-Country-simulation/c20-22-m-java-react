@@ -7,6 +7,7 @@ public class ConvertirPublicacion {
 
     public static PublicacionDTO publicacionToPublicacionDTO(Publicacion publicacion) {
         return new PublicacionDTO(
+                publicacion.get_id(),
                 publicacion.getUsuarioNombre(),
                 publicacion.getUsuarioEmail(),
                 publicacion.getUsuarioTelefono(),

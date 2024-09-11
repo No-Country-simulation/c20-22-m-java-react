@@ -27,7 +27,7 @@ public class PublicacionController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Publicacion>> all() {
+    public ResponseEntity<List<PublicacionDTO>> all() {
         return new ResponseEntity<>(publicacionService.getAll(), HttpStatus.OK);
     }
 
