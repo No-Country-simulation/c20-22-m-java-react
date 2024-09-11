@@ -2,6 +2,7 @@ package com.no.country.pet.rescue.controllers;
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
 import com.no.country.pet.rescue.entities.Publicacion;
 import com.no.country.pet.rescue.services.IPublicacionService;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class PublicacionController {
     IPublicacionService publicacionService;
 
     @PostMapping("/save")
-    public ResponseEntity<PublicacionDTO> save(@RequestBody PublicacionDTO publicacion) {
+    public ResponseEntity<PublicacionDTO> save(@Valid @RequestBody PublicacionDTO publicacion) {
         return new ResponseEntity<>(publicacionService.save(publicacion), HttpStatus.OK);
     }
 
