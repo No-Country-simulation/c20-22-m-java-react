@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IPublicacionService {
     PublicacionDTO save(PublicacionDTO publicacion);
-    List<Publicacion> getAll();
+    List<PublicacionDTO> getAll();
     PublicacionDTO findById(String idPublicacion);
     PublicacionDTO update(String idPublicacion, PublicacionDTO publicacionDTO);
     String deleteById(String idPublicacion);
