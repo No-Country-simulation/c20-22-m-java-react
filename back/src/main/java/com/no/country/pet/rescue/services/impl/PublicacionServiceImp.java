@@ -29,13 +29,13 @@ public class PublicacionServiceImp implements IPublicacionService {
     }
 
     @Override
-    public List<PublicacionDTO> getAll() {
+    public List<Publicacion> getAll() {
         List<Publicacion> publicaciones = publicacionRepository.findAll();
         List<PublicacionDTO> publicacionesDTO = new ArrayList<>();
         for(Publicacion publicacion: publicaciones){
             publicacionesDTO.add(ConvertirPublicacion.publicacionToPublicacionDTO(publicacion));
         }
-        return publicacionesDTO;
+        return publicaciones;
     }
 
     @Override

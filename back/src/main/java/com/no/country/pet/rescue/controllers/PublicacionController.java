@@ -1,5 +1,6 @@
 package com.no.country.pet.rescue.controllers;
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
+import com.no.country.pet.rescue.entities.Publicacion;
 import com.no.country.pet.rescue.services.IPublicacionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +27,7 @@ public class PublicacionController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<PublicacionDTO>> all() {
+    public ResponseEntity<List<Publicacion>> all() {
         return new ResponseEntity<>(publicacionService.getAll(), HttpStatus.OK);
     }
 
