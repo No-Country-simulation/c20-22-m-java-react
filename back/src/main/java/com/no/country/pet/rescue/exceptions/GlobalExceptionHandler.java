@@ -24,4 +24,9 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(errores, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(PublicacionNotFoundException.class)
+    public ResponseEntity<String> handlePublicacionNotFound(PublicacionNotFoundException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
 }
