@@ -4,6 +4,7 @@ import styles from './Publishlost.module.css'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
+import { capitalizeFirstLetter, capitalizeWords } from '../../helpers/validations'
 
 export default function Publishlost() {
 	const navigate = useNavigate()
@@ -52,20 +53,11 @@ export default function Publishlost() {
 			})
 			.catch((error) => console.error('Error al convertir imágenes:', error))
 	}
-	function capitalizeFirstLetter(text) {
-		return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
-	}
-	function capitalizeWords(str) {
-		return str
-			.split(',')
-			.map((word) => word.trim().charAt(0).toUpperCase() + word.trim().slice(1).toLowerCase())
-			.join(', ')
-	}
+
 
 const handleChange = (e) => {
 	const { name, value } = e.target
 
-	
 	if (name === 'mascota_nombre' || name === 'usuario_nombre' || name === 'zona') {
 		setFormData((prevFormData) => ({
 			...prevFormData,

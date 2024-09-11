@@ -4,6 +4,7 @@ import styles from './Publishfound.module.css'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
+import { capitalizeFirstLetter, capitalizeWords } from '../../helpers/validations'
 
 export default function Publishfound() {
 	const navigate = useNavigate()
@@ -70,15 +71,7 @@ export default function Publishfound() {
 			}))
 		}
 	}
-	function capitalizeFirstLetter(text) {
-		return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
-	}
-	function capitalizeWords(str) {
-		return str
-			.split(',')
-			.map((word) => word.trim().charAt(0).toUpperCase() + word.trim().slice(1).toLowerCase())
-			.join(', ')
-	}
+
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
