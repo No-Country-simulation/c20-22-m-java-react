@@ -16,7 +16,7 @@ public record PublicacionDTO(
         @Pattern(regexp = "^[\\w-\\.]+@[\\w-]+(\\.[\\w-]{2,})+$", message = "El email debe contener un dominio válido")
         String usuarioEmail,
         @NotNull(message = "El numero de telefono es obligatorio")
-        Integer usuarioTelefono,
+        Long usuarioTelefono,
         @NotBlank(message = "El nombre de la mascota es obligatorio")
         String mascotaNombre,
         @NotBlank(message = "La especie de la mascota es obligatoria")
