@@ -17,7 +17,6 @@ public record PublicacionDTO(
         String usuarioEmail,
         @NotNull(message = "El numero de telefono es obligatorio")
         Long usuarioTelefono,
-        @NotBlank(message = "El nombre de la mascota es obligatorio")
         String mascotaNombre,
         @NotBlank(message = "La especie de la mascota es obligatoria")
         String mascotaEspecie,
