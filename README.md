@@ -95,7 +95,8 @@ Después de las pruebas de usabilidad.
 
 _Gestión de Defectos_
 
-Herramienta: Jira.
+Herramienta: Jira
+
 Proceso: Los defectos se documentarán en Jira con prioridad asignada, se realizará un seguimiento diario para su resolución.
 
 A medida que avanzamos en la simulación y en la implementación real del proyecto, este plan de pruebas servirá como referencia para garantizar una cobertura adecuada y se actualizará conforme sea necesario para reflejar cambios en el proyecto o en el entorno de prueba. Su propósito es asegurar que el producto final cumpla con los requisitos y expectativas planteadas por el equipo.
