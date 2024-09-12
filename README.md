@@ -52,9 +52,11 @@ _Tipo de Pruebas_
 * Pruebas de Interfaz de Usuario (UI)
 
 _Criterios de Aceptación y Salida_
+
 Criterios de Aceptación:
 * Todas las pruebas críticas deben ser superadas con éxito.
 * No deben existir defectos de alta prioridad abiertos.
+  
 Criterios de Salida:
 * Completar el 100% de los casos de prueba planificados.
 
