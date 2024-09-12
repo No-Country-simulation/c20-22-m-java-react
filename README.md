@@ -11,6 +11,7 @@ Crear una plataforma en línea que permita a los usuarios reportar y buscar masc
 ## Plan de Pruebas para el Proyecto MascotasConectadas
 
 _Introducción_
+
 Este documento detalla el alcance, objetivos, recursos y criterios de aceptación para las pruebas del proyecto "MascotasConectadas". Proporciona una guía para la ejecución de los casos de prueba y un cronograma ajustable según la disponibilidad del entorno de despliegue. Además, describe cómo se gestionarán los defectos encontrados durante las pruebas.
 Nombre del Proyecto: MascotasConectadas
 Descripción del Proyecto: Este proyecto tiene como objetivo desarrollar un MVP para una aplicación webapp-mobile destinada a la búsqueda y reporte de mascotas perdidas y encontradas.
