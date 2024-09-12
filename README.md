@@ -1,9 +1,14 @@
 # c20-22-m-java-react
 Repo de la web-app de la cohorte c20-22-m-java-react
+## Título: Pet Rescue
+## Industria o Rubro: Red de Reencuentro de Mascotas
+## Descripción del Proyecto: 
+Crear una plataforma en línea que permita a los usuarios reportar y buscar mascotas perdidas o encontradas, facilitando su reencuentro. La app es accesible desde dispositivos móviles y sitios web, asegurando una experiencia sencilla y rápida para todos.
 
 ## Integrantes
 - Mariana Rosso 
-Plan de Pruebas para el Proyecto MascotasConectadas
+
+## Plan de Pruebas para el Proyecto MascotasConectadas
 
 1. Introducción
 Este documento detalla el alcance, objetivos, recursos y criterios de aceptación para las pruebas del proyecto "MascotasConectadas". Proporciona una guía para la ejecución de los casos de prueba y un cronograma ajustable según la disponibilidad del entorno de despliegue. Además, describe cómo se gestionarán los defectos encontrados durante las pruebas.
