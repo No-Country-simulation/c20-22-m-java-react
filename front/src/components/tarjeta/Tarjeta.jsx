@@ -12,7 +12,7 @@ const Tarjeta = ({ publicacion }) => {
 			<div className={styles.info}>
 				<h2 className={styles.nombre}>{publicacion.mascota_nombre}</h2>
 				<p className={styles.direccion}>
-					<strong>Dirección:</strong> {publicacion.zona}
+					<strong>Zona:</strong> {publicacion.zona}
 				</p>
 				<p className={styles.edad}>
 					<strong>Fecha:</strong> {publicacion.fecha}
