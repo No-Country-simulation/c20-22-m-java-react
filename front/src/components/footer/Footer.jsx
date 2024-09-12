@@ -63,6 +63,7 @@ const Footer = () => {
 
 				</div>
 			</div>
+			<br />
                 <p>Terms of Service</p>
                 <p>© 2024 PetRescue. All rights reserved.</p>
 		</div>
