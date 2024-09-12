@@ -59,6 +59,7 @@ Criterios de Salida:
 * Completar el 100% de los casos de prueba planificados.
 
 _Casos de Prueba_
+
 Todos los casos de prueba para el proyecto están documentados en un [Google Sheets] https://docs.google.com/spreadsheets/d/1Fg_v7VB74THGAXQ4eaZUNM7KjyWO8zEqQ76J9EKgUw0/edit?usp=sharing 
 Este documento incluye un conteo total y detalles sobre cada caso de prueba.
 
