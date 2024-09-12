@@ -24,7 +24,15 @@ Crear una plataforma en línea que permita a las personas reportar mascotas perd
  - React
  - [tecnologias de estilos]
  - otros...
+### Backend
 
+ - Java
+ - [tecnologia de BBD] 
+ - otros..
+ 
+### Enlaces
+
+**Deploy:** [Front posiblemente Vercel]
 
 ## Plan de Pruebas para el Proyecto Pet Rescue
 
@@ -102,12 +110,4 @@ Proceso: Los defectos se documentarán en Jira con prioridad asignada, se realiz
 A medida que avanzamos en la simulación y en la implementación real del proyecto, este plan de pruebas servirá como referencia para garantizar una cobertura adecuada y se actualizará conforme sea necesario para reflejar cambios en el proyecto o en el entorno de prueba. Su propósito es asegurar que el producto final cumpla con los requisitos y expectativas planteadas por el equipo.
 
 
-### Backend
 
- - Java
- - [tecnologia de BBD] 
- - otros..
- 
-### Enlaces
-
-**Deploy:** [Front posiblemente Vercel]
