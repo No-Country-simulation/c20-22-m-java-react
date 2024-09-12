@@ -9,6 +9,7 @@ import { format, parseISO } from 'date-fns'
 import { es } from 'date-fns/locale'
 import styles from './Detail.module.css'
 import ImageGallery from 'react-image-gallery'
+import { BASE_URL } from '../../envs'
 
 const formatDate = (dateString) => {
 	const date = parseISO(dateString)
@@ -25,7 +26,7 @@ const Detail = () => {
 		if (id) {
 			const fetchData = async () => {
 				try {
-					const response = await axios.get(`http://localhost:3000/api/v1/publications/findById/${id}`)
+					const response = await axios.get(`${BASE_URL}/findById/${id}`)
 					console.log('Publicación:', response.data)
 					setPublicacion(response.data)
 				} catch (error) {
