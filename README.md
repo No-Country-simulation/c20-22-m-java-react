@@ -1,12 +1,30 @@
+
 # c20-22-m-java-react
 Repo de la web-app de la cohorte c20-22-m-java-react
 ## Título: Pet Rescue
 ## Industria o Rubro: Red de Reencuentro de Mascotas
 ## Descripción del Proyecto: 
-Crear una plataforma en línea que permita a los usuarios reportar y buscar mascotas perdidas o encontradas, facilitando su reencuentro. La app es accesible desde dispositivos móviles y sitios web, asegurando una experiencia sencilla y rápida para todos.
+Crear una plataforma en línea que permita a las personas reportar mascotas perdidas o encontradas, facilitando su reencuentro. La app es accesible desde dispositivos móviles y sitios web, asegurando una experiencia sencilla y rápida para todos.
 
 ## Integrantes
-- Mariana Rosso 
+- Mariana Rosso  - QA Tester - https://www.linkedin.com/in/mariana-rosso/
+- Gabriel Gotlib - Frontend - https://www.linkedin.com/in/gabriel-gotlib-5855197b
+- Sebastian Jimenez - Proyect Manager -
+- Gisele Moises - QA Tester -
+- Dahier Quintero - Backend -
+- Marianella Machicado - Backend -
+- Martin Cerbin - Frontend -
+- Luz de los Angeles Lamas - Frontend - 
+- completar...
+
+
+## Tecnologias
+
+### Frontend
+ - React
+ - [tecnologias de estilos]
+ - otros...
+
 
 ## Plan de Pruebas para el Proyecto MascotasConectadas
 
@@ -19,22 +37,22 @@ Objetivo del Plan de Pruebas: Garantizar que la plataforma MascotasConectadas cu
 
 _Alcance de las Pruebas_
 Funcionalidades a Probar:
-* Diseño y Usabilidad: Verifica la consistencia del diseño, la usabilidad general y la experiencia del usuario.
-* Formularios de Reporte: Asegura que todos los campos estén presentes, funcionen correctamente y manejen errores adecuadamente.
-* Navegación y Funcionalidad del Footer: Revisa que el footer sea visible y funcional en todas las páginas.
-* Visualización de Datos: Confirma que los datos de contacto y otras informaciones sean correctas y se muestren como se espera.
-* Reporte de mascotas perdidas y encontradas: Asegura que el reporte funcione correctamente y que la información se registre y muestre adecuadamente.
-* Manejo de errores: Verifica que el sistema maneje los errores de manera adecuada y proporcione mensajes claros.
-* Visualización de una lista de mascotas reportadas: Asegura que la lista se muestre correctamente y sea actualizable.
-* Filtrado y ordenamiento de resultados: Verifica que las opciones de filtrado y ordenamiento funcionen como se espera.
-* Interacción con tarjetas de mascotas (ver detalles, contactar usuario, etc): Asegura que los usuarios puedan ver detalles, contactar a los propietarios y realizar otras interacciones: 
-* Actualización de la información de contacto: Verifica que los datos de contacto sean visibles y se actualicen correctamente si es necesario.
+* Diseño y Usabilidad
+* Formularios de Reporte
+* Navegación y Funcionalidad del Footer
+* Visualización de Datos
+* Reporte de mascotas perdidas y encontradas
+* Manejo de errores
+* Visualización de una lista de mascotas reportadas
+* Filtrado y ordenamiento de resultados
+* Interacción con tarjetas de mascotas
+* Actualización de la información de contacto
 
 _Estrategia de Pruebas_
 Tipos de Pruebas:
-* Pruebas Funcionales: Validación de las funcionalidades principales de la plataforma.
-* Pruebas de Integración: Verificación de la interacción entre módulos.
-* Pruebas de Interfaz de Usuario (UI): Asegurar la correcta visualización y funcionalidad de la interfaz.
+* Pruebas Funcionales
+* Pruebas de Integración
+* Pruebas de Interfaz de Usuario (UI)
 
 _Criterios de Aceptación y Salida_
 Criterios de Aceptación:
@@ -52,7 +70,7 @@ Herramientas de Prueba: Jira para gestión de pruebas y defectos.
 Recursos: 1 Tester Trainee, 1 Project Manager.
 Entorno de Pruebas: Computadoras y dispositivos móviles. Sistema Operativo: Windows 10 y Android 10 respectivamente. Navegadores: Google Chrome y Edge.
 
-7. Cronograma de Pruebas
+_Cronograma de Pruebas_
 El cronograma de pruebas es flexible y se ajustará en base a la disponibilidad del entorno de despliegue. Los tiempos son aproximados.
 Preparación del Entorno
 Duración: 1 día
@@ -80,4 +98,12 @@ Proceso: Los defectos se documentarán en Jira con prioridad asignada, se realiz
 A medida que avanzamos en la simulación y en la implementación real del proyecto, este plan de pruebas servirá como referencia para garantizar una cobertura adecuada y se actualizará conforme sea necesario para reflejar cambios en el proyecto o en el entorno de prueba. Su propósito es asegurar que el producto final cumpla con los requisitos y expectativas planteadas por el equipo.
 
 
+### Backend
 
+ - Java
+ - [tecnologia de BBD] 
+ - otros..
+ 
+### Enlaces
+
+**Deploy:** [Front posiblemente Vercel]
