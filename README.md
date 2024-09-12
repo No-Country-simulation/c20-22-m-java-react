@@ -26,7 +26,7 @@ Crear una plataforma en línea que permita a las personas reportar mascotas perd
  - otros...
 
 
-## Plan de Pruebas para el Proyecto MascotasConectadas
+## Plan de Pruebas para el Proyecto Pet Rescue
 
 _Introducción_
 
