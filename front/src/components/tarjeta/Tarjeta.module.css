@@ -9,6 +9,7 @@
 	transition: transform 0.2s;
 	text-decoration: none;
 	color: var(--color-primario);
+	background-color: white;
 }
 
 .tarjeta:hover {

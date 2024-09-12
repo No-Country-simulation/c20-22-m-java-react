@@ -97,3 +97,11 @@ h2 {
 	margin-bottom: 8px;
 }
 
+.contactButton {
+	background: var(--color-primario);
+	color: var(--color-secundario);
+	padding: 1rem 2rem;
+	border-width: 2px;
+	border-radius: 5rem;
+	font-size: 1rem;
+}

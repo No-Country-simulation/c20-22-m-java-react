@@ -77,7 +77,7 @@ function Home() {
 				</h2>
 				{isLoading ? <Spiner /> : <ListaDeTarjetas publicacions={mascotasFiltradas} />}
 			</div>
-			<div className={styles.tarjetasContainer}>
+			<div className={styles.tarjetasContainer2}>
 				<h2>Estas mascotas se reencontraron con sus dueños gracias a Pet Rescue!</h2>
 				{isLoading ? <Spiner /> : <ListaDeTarjetas publicacions={mascotasEncontradas} />}
 			</div>
