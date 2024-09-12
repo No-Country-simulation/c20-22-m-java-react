@@ -47,8 +47,7 @@ Funcionalidades a Probar:
 * Interacción con tarjetas de mascotas
 * Actualización de la información de contacto
 
-_Estrategia de Pruebas_
-Tipos de Pruebas:
+_Tipo de Pruebas_
 * Pruebas Funcionales
 * Pruebas de Integración
 * Pruebas de Interfaz de Usuario (UI)
