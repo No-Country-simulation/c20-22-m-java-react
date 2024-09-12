@@ -22,7 +22,7 @@ public class Publicacion {
     @Field("usuario_email")
     private String usuarioEmail;
     @Field("usuario_telefono")
-    private Integer usuarioTelefono;
+    private Long usuarioTelefono;
     @Field("mascota_nombre")
     private String mascotaNombre;
     @Field("mascota_especie")
@@ -48,7 +48,7 @@ public class Publicacion {
     @Field("rescatada")
     private Boolean rescatada;
 
-    public Publicacion(String usuarioNombre, String usuarioEmail, Integer usuarioTelefono, String mascotaNombre, String mascotaEspecie, String mascotaRaza, List<String> mascotaColores, String mascotaTamanio, String mascotaEdad, String mascotaDescripcion, String fecha, String zona, List<String> fotos, Boolean publicaDuenio, Boolean rescatada) {
+    public Publicacion(String usuarioNombre, String usuarioEmail, Long usuarioTelefono, String mascotaNombre, String mascotaEspecie, String mascotaRaza, List<String> mascotaColores, String mascotaTamanio, String mascotaEdad, String mascotaDescripcion, String fecha, String zona, List<String> fotos, Boolean publicaDuenio, Boolean rescatada) {
         this.usuarioNombre = usuarioNombre;
         this.usuarioEmail = usuarioEmail;
         this.usuarioTelefono = usuarioTelefono;

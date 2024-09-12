@@ -52,7 +52,7 @@ public class ConvertirPublicacion {
         updateUsuario(publicacion,publicacionDTO);
         updateMascota(publicacion,publicacionDTO);
         updateInfo(publicacion,publicacionDTO);
-        return publicacion;
+        return publicacionUpdated;
     }
 
     /**Actualiza los datos del usuario de la publicacion.*/
