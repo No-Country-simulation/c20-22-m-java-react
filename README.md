@@ -64,11 +64,13 @@ Todos los casos de prueba para el proyecto están documentados en un [Google She
 Este documento incluye un conteo total y detalles sobre cada caso de prueba.
 
 _Recursos y Herramientas_
+
 Herramientas de Prueba: Jira para gestión de pruebas y defectos.
 Recursos: 1 Tester Trainee, 1 Project Manager.
 Entorno de Pruebas: Computadoras y dispositivos móviles. Sistema Operativo: Windows 10 y Android 10 respectivamente. Navegadores: Google Chrome y Edge.
 
 _Cronograma de Pruebas_
+
 El cronograma de pruebas es flexible y se ajustará en base a la disponibilidad del entorno de despliegue. Los tiempos son aproximados.
 Preparación del Entorno
 Duración: 1 día
@@ -90,6 +92,7 @@ Duración: 1 día
 Después de las pruebas de usabilidad.
 
 _Gestión de Defectos_
+
 Herramienta: Jira.
 Proceso: Los defectos se documentarán en Jira con prioridad asignada, se realizará un seguimiento diario para su resolución.
 
