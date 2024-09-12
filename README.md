@@ -34,8 +34,7 @@ Este documento detalla el alcance, objetivos, recursos y criterios de aceptació
 
 _Objetivo del Plan de Pruebas_ Garantizar que la plataforma Pet Rescue cumpla con los requisitos funcionales y no funcionales establecidos, mediante una serie de pruebas exhaustivas para validar su calidad, usabilidad y desempeño.
 
-_Alcance de las Pruebas_
-Funcionalidades a Probar:
+_Funcionalidades a Probar_
 * Diseño y Usabilidad
 * Formularios de Reporte
 * Navegación y Funcionalidad del Footer
