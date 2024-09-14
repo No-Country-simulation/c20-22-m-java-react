@@ -49,11 +49,10 @@ public class ConvertirPublicacion {
 
     /**Actualiza los datos de una publicacion*/
     public static Publicacion updatePublicacion(Publicacion publicacion, DetailsToUpdateDTO publicacionDTO){
-        Publicacion publicacionUpdated = new Publicacion();
         updateUsuario(publicacion,publicacionDTO);
         updateMascota(publicacion,publicacionDTO);
         updateInfo(publicacion,publicacionDTO);
-        return publicacionUpdated;
+        return publicacion;
     }
 
     /**Actualiza los datos del usuario de la publicacion.*/
