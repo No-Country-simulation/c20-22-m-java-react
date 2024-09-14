@@ -1,4 +1,5 @@
 package com.no.country.pet.rescue.services.impl;
+import com.no.country.pet.rescue.dtos.DetailsToUpdateDTO;
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
 import com.no.country.pet.rescue.entities.Publicacion;
 import com.no.country.pet.rescue.exceptions.PublicacionNotFoundException;
@@ -47,7 +48,7 @@ public class PublicacionServiceImp implements IPublicacionService {
     }
 
     @Override
-    public PublicacionDTO update(String idPublicacion, PublicacionDTO publicacionDTO){
+    public PublicacionDTO update(String idPublicacion, DetailsToUpdateDTO publicacionDTO){
         Optional<Publicacion> publicacionOptional = publicacionRepository.findById(idPublicacion);
         if (publicacionOptional.isPresent()){
             Publicacion publicacionUpdated = ConvertirPublicacion.updatePublicacion(publicacionOptional.get(),publicacionDTO);
