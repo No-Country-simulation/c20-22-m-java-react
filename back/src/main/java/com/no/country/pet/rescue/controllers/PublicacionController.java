@@ -1,6 +1,6 @@
 package com.no.country.pet.rescue.controllers;
+import com.no.country.pet.rescue.dtos.DetailsToUpdateDTO;
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
-import com.no.country.pet.rescue.entities.Publicacion;
 import com.no.country.pet.rescue.services.IPublicacionService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ public class PublicacionController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<PublicacionDTO> update(@PathVariable String id, @RequestBody PublicacionDTO publicacion) {
+    public ResponseEntity<PublicacionDTO> update(@PathVariable String id, @RequestBody DetailsToUpdateDTO publicacion) {
         logger.info("Publicacion con id: {} actualizada exitosamente.", id);
         return new ResponseEntity<>(publicacionService.update(id,publicacion), HttpStatus.OK);
     }

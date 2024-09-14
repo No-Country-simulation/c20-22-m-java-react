@@ -1,5 +1,6 @@
 package com.no.country.pet.rescue.utils;
 
+import com.no.country.pet.rescue.dtos.DetailsToUpdateDTO;
 import com.no.country.pet.rescue.dtos.PublicacionDTO;
 import com.no.country.pet.rescue.entities.Publicacion;
 
@@ -47,7 +48,7 @@ public class ConvertirPublicacion {
     }
 
     /**Actualiza los datos de una publicacion*/
-    public static Publicacion updatePublicacion(Publicacion publicacion, PublicacionDTO publicacionDTO){
+    public static Publicacion updatePublicacion(Publicacion publicacion, DetailsToUpdateDTO publicacionDTO){
         Publicacion publicacionUpdated = new Publicacion();
         updateUsuario(publicacion,publicacionDTO);
         updateMascota(publicacion,publicacionDTO);
@@ -56,7 +57,7 @@ public class ConvertirPublicacion {
     }
 
     /**Actualiza los datos del usuario de la publicacion.*/
-    private static void updateUsuario(Publicacion publicacion, PublicacionDTO publicacionDTO){
+    private static void updateUsuario(Publicacion publicacion, DetailsToUpdateDTO publicacionDTO){
         if(publicacionDTO.usuarioNombre()!=null)
             publicacion.setUsuarioNombre(publicacionDTO.usuarioNombre());
 
@@ -68,7 +69,7 @@ public class ConvertirPublicacion {
     }
 
     /**Actualiza los datos de la mascota de la publicacion.*/
-    private static void updateMascota(Publicacion publicacion, PublicacionDTO publicacionDTO){
+    private static void updateMascota(Publicacion publicacion, DetailsToUpdateDTO publicacionDTO){
         if(publicacionDTO.mascotaNombre()!=null)
             publicacion.setMascotaNombre(publicacionDTO.mascotaNombre());
 
@@ -92,7 +93,7 @@ public class ConvertirPublicacion {
     }
 
     /**Actualiza informacion extra de la publicacion.*/
-    private static void updateInfo(Publicacion publicacion, PublicacionDTO publicacionDTO){
+    private static void updateInfo(Publicacion publicacion, DetailsToUpdateDTO publicacionDTO){
         if(publicacionDTO.fecha()!=null)
             publicacion.setFecha(publicacionDTO.fecha());
 
