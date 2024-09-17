@@ -18,18 +18,18 @@
 ---
 
 ### ✅ Publicacion
->**GET:** `http://localhost:3000/api/v1/publications/all`
+>**GET:** `https://compatible-laurene-dilanquintero-b3b8b0a1.koyeb.app/api/v1/publications/all`
 
->**GET:** `http://localhost:3000/api/v1/publications/findById/{id}`
+>**GET:** `https://compatible-laurene-dilanquintero-b3b8b0a1.koyeb.app/api/v1/publications/findById/{id}`
 
->**GET:** `http://localhost:3000/api/v1/publications/allOwnerPublishes`
+>**GET:** `https://compatible-laurene-dilanquintero-b3b8b0a1.koyeb.app/api/v1/publications/allOwnerPublishes`
  
->**GET:** `http://localhost:3000/api/v1/publications/allOwnerNonPublishes`
+>**GET:** `https://compatible-laurene-dilanquintero-b3b8b0a1.koyeb.app/api/v1/publications/allOwnerNonPublishes`
 
->**GET:** `http://localhost:3000/api/v1/publications/allRescuedPets`
+>**GET:** `https://compatible-laurene-dilanquintero-b3b8b0a1.koyeb.app/api/v1/publications/allRescuedPets`
 
->**POST:** `http://localhost:3000/api/v1/publications/save`
+>**POST:** `https://compatible-laurene-dilanquintero-b3b8b0a1.koyeb.app/api/v1/publications/save`
 
->**PUT:** `http://localhost:3000/api/v1/publications/update/{id}`
+>**PUT:** `https://compatible-laurene-dilanquintero-b3b8b0a1.koyeb.app/api/v1/publications/update/{id}`
 
->**DELETE:** `http://localhost:3000/api/v1/publications/delete/{id}`
+>**DELETE:** `https://compatible-laurene-dilanquintero-b3b8b0a1.koyeb.app/api/v1/publications/delete/{id}`
