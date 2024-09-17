@@ -5,9 +5,12 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 import { capitalizeFirstLetter, capitalizeWords } from '../../helpers/validations'
+import { BASE_URL } from '../../envs'
+import Spiner from "../../components/spiner/Spiner"
 
 export default function Publishfound() {
 	const navigate = useNavigate()
+	const [isLoading, setIsLoading] = useState(false)
 	const [errors, setErrors] = useState([])
 	const [images, setImages] = useState([])
 	const [formData, setFormData] = useState({
@@ -74,6 +77,7 @@ export default function Publishfound() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
+		setIsLoading(true)
 		setErrors([])
 		formData.usuario_nombre = capitalizeFirstLetter(formData.usuario_nombre)
 		formData.zona = capitalizeFirstLetter(formData.zona)
@@ -128,8 +132,9 @@ export default function Publishfound() {
 			return
 		}
 		try {
-			const response = await axios.post('http://localhost:3000/api/v1/publications/save', formData)
+			const response = await axios.post(`${BASE_URL}/save`, formData)
 			console.log(response)
+					setIsLoading(false)
 			Swal.fire({
 				title: '<strong>Publicación exitosa</strong>',
 				icon: 'info',
@@ -148,6 +153,7 @@ export default function Publishfound() {
 			})
 		} catch (error) {
 			console.log(error)
+			setIsLoading(false)
 		}
 	}
 
@@ -251,10 +257,10 @@ export default function Publishfound() {
 
 					<div className={styles.buttonContainer}>
 						<button className={styles.buttonClear} onClick={handleClear}>
-							Borrar todo
+							{isLoading ? <Spiner /> : 'Limpiar formulario'}
 						</button>
 						<button type='submit' className={styles.buttonSend}>
-							Publicar
+							{isLoading ? <Spiner /> : 'Publicar'}
 						</button>
 					</div>
 				</form>
