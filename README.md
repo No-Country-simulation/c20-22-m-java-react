@@ -1,4 +1,3 @@
-
 # c20-22-m-java-react
 Repo de la web-app de la cohorte c20-22-m-java-react
 ## Título: Pet Rescue
@@ -9,30 +8,29 @@ Crear una plataforma en línea que permita a las personas reportar mascotas perd
 ## Integrantes
 - Mariana Rosso  - QA Tester - https://www.linkedin.com/in/mariana-rosso/
 - Gabriel Gotlib - Frontend - https://www.linkedin.com/in/gabriel-gotlib-5855197b
-- Sebastian Jimenez - Proyect Manager -
-- Gisele Moises - QA Tester -
-- Dahier Quintero - Backend -
-- Marianella Machicado - Backend -
-- Martin Cerbin - Frontend -
-- Luz de los Angeles Lamas - Frontend - 
-- completar...
+- Sebastian Jimenez - Proyect Manager - https://www.linkedin.com/in/sebastianjimenez-ingeniero-industrial
+- Dahier Quintero - Backend - https://www.linkedin.com/in/dilandahierquinteror-backend-developer/
+- Marianella Machicado - Backend - https://www.linkedin.com/in/marianella-machicado
+- Martin Cerbin - Frontend - https://www.linkedin.com/in/martin-cerbin/
+- Luz de los Angeles Lamas - Frontend - https://www.linkedin.com/in/luz-lamas-a7b30024b/
 
 
 ## Tecnologias
 
 ### Frontend
  - React
- - [tecnologias de estilos]
- - otros...
-### Backend
+ - CSS Modules
+ - Bootstrap
+ - axios
+ - Sweets Alerts 
 
+### Backend
  - Java
- - [tecnologia de BBD] 
- - otros..
+ - MongoDB 
+ - Postman
  
 ### Enlaces
-
-**Deploy:** [Front posiblemente Vercel]
+**Deploy:** https://pets-blue.vercel.app/
 
 ## Plan de Pruebas para el Proyecto Pet Rescue
 
@@ -108,6 +106,3 @@ Herramienta: Jira
 Proceso: Los defectos se documentarán en Jira con prioridad asignada, se realizará un seguimiento diario para su resolución.
 
 A medida que avanzamos en la simulación y en la implementación real del proyecto, este plan de pruebas servirá como referencia para garantizar una cobertura adecuada y se actualizará conforme sea necesario para reflejar cambios en el proyecto o en el entorno de prueba. Su propósito es asegurar que el producto final cumpla con los requisitos y expectativas planteadas por el equipo.
-
-
-

@@ -1,0 +1,107 @@
+.section {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--color-primario);
+	background-color: var(--color-fondo);
+  padding: 1rem;
+}
+
+.title {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+  text-align: center;
+}
+.subtitle {
+  font-size: 1.5rem;
+	margin-bottom: 0;
+  text-align: center;
+}
+
+.formContainer {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 3rem;
+  margin: 0;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+	/* max-width: 24rem; */
+	margin: 0 ;
+	gap: 1rem;
+}
+
+.input {
+	background-color: #f0f0f0;
+	border: 2px solid var(--color-primario);
+	color: var(--color-primario);
+	font-size: 0.875rem;
+	border-radius: 1rem;
+	display: block;
+	width: calc(100% - 0.1rem); 
+	padding: 1rem;
+	font-size: 1rem;
+	box-sizing: border-box; 
+}
+
+.buttonContainer {
+  width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+  gap: 1rem;
+}
+
+.buttonSend {
+	color: var(--color-secundario);
+	background-color: var(--color-primario);
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.buttonClear {
+	color: white;
+	background-color: red;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.label {
+  display: block;
+  font-weight: normal;
+  color: var(--color-primario); 
+    font-size: 1rem;
+    text-align: center;
+}
+.errorContainer {
+  background-color: #ffe5e5; /* Fondo rojo claro */
+  border: 1px solid #ff0000; /* Borde rojo */
+  color: #ff0000; /* Texto rojo */
+  padding: 15px; /* Espaciado interno */
+  margin-top: 20px; /* Espacio sobre el contenedor */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.errorContainer h4 {
+  margin: 0 0 10px 0; /* Quitar margen superior e inferior */
+  font-size: 16px; /* Tamaño de fuente más pequeño */
+  font-weight: bold; /* Negrita para el título */
+}
+
+.errorContainer ul {
+  list-style-type: disc; /* Lista con viñetas */
+  padding-left: 20px; /* Espaciado a la izquierda de la lista */
+  margin: 0;
+}
+
+.errorContainer li {
+  margin-bottom: 5px; /* Espacio entre los errores */
+  font-size: 14px; /* Tamaño de fuente del texto de los errores */
+}

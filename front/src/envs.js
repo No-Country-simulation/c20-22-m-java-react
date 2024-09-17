@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://compatible-laurene-dilanquintero-b3b8b0a1.koyeb.app/api/v1/publications' 

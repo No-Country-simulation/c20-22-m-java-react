@@ -1,0 +1,112 @@
+.bodyFooter {
+	background-color: var(--color-primario);
+	color: var(--color-secundario);
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 0px 2px 14px grey;
+	position: relative;
+	z-index: 10;
+	padding: 1rem;
+
+	@media screen and (max-width: 768px) {
+
+	}
+}
+.logoContainer {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+.nav {
+	display: flex;
+	list-style-type: none;
+	padding: 0%;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+.nav li {
+	margin: 0rem 2rem 0rem 2rem;
+	color: var(--color-secundario);
+	text-decoration: none;
+}
+li a {
+	color: var(--color-secundario);
+	text-decoration: none;
+	font-size: 1.2rem;
+	@media screen and (max-width: 768px) {
+		font-size: smaller;
+	}
+}
+
+li a:hover {
+	color: #d0dae4;
+}
+
+.rightsContainer {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	border-top: 01px solid;
+	padding-top: 1rem;
+	font-size: smaller;
+align-items: center;
+	@media screen and (max-width: 768px) {
+		justify-content: space-around;
+		width: 100%;
+		gap: 1rem;
+    text-align: center;
+	}
+}
+.logo {
+	width: 100px;
+}
+.rightsContainer p {
+	margin: 0%;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.socialicons {
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	justify-items: center;
+	width: 100%;
+}
+
+.sociallink {
+  color: var(--color-secundario); /* Equivalente a text-gray-500 */
+  margin-left: 1.25rem; /* Equivalente a ms-5 */
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.sociallink:hover {
+  color: #111827; /* Equivalente a hover:text-gray-900 */
+}
+
+.sociallink svg {
+  width: 1rem; /* Equivalente a w-4 */
+  height: 1rem; /* Equivalente a h-4 */
+}
+
+.sronly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.icon {
+  width: 1rem;   /* Tamaño de ancho, puedes ajustar según lo necesites */
+  height: 1rem;  /* Tamaño de alto */
+  fill: var(--color-secundario); /* Hace que el color de relleno del icono sea el mismo que el del texto */
+  transition: fill 0.3s ease; /* Añade una transición suave cuando el color cambia */
+}
