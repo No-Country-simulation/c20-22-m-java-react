@@ -38,7 +38,7 @@ Crear una plataforma en línea que permita a las personas reportar mascotas perd
 
 _Introducción_
 
-Este documento detalla el alcance, objetivos, recursos y criterios de aceptación para las pruebas del proyecto "MascotasConectadas". Proporciona una guía para la ejecución de los casos de prueba y un cronograma ajustable según la disponibilidad del entorno de despliegue. Además, describe cómo se gestionarán los defectos encontrados durante las pruebas.
+Este documento detalla el alcance, objetivos, recursos y criterios de aceptación para las pruebas del proyecto "Pet Rescue". Proporciona una guía para la ejecución de los casos de prueba y un cronograma ajustable según la disponibilidad del entorno de despliegue. Además, describe cómo se gestionarán los defectos encontrados durante las pruebas.
 
 _Objetivo del Plan de Pruebas_ Garantizar que la plataforma Pet Rescue cumpla con los requisitos funcionales y no funcionales establecidos, mediante una serie de pruebas exhaustivas para validar su calidad, usabilidad y desempeño.
 
