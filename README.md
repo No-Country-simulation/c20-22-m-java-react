@@ -6,14 +6,13 @@ Repo de la web-app de la cohorte c20-22-m-java-react
 Crear una plataforma en línea que permita a las personas reportar mascotas perdidas o encontradas, facilitando su reencuentro. La app es accesible desde dispositivos móviles y sitios web, asegurando una experiencia sencilla y rápida para todos.
 
 ## Integrantes
-- Mariana Rosso  - QA Tester -  https://www.linkedin.com/in/mariana-rosso
+- Mariana Rosso  - QA Tester - https://www.linkedin.com/in/mariana-rosso/
 - Gabriel Gotlib - Frontend - https://www.linkedin.com/in/gabriel-gotlib-5855197b
 - Sebastian Jimenez - Proyect Manager - https://www.linkedin.com/in/sebastianjimenez-ingeniero-industrial
 - Dahier Quintero - Backend - https://www.linkedin.com/in/dilandahierquinteror-backend-developer/
 - Marianella Machicado - Backend - https://www.linkedin.com/in/marianella-machicado
 - Martin Cerbin - Frontend - https://www.linkedin.com/in/martin-cerbin/
 - Luz de los Angeles Lamas - Frontend - https://www.linkedin.com/in/luz-lamas-a7b30024b/
-
 
 
 ## Tecnologias
@@ -26,20 +25,18 @@ Crear una plataforma en línea que permita a las personas reportar mascotas perd
  - Sweets Alerts 
 
 ### Backend
-
  - Java
  - MongoDB 
  - Postman
  
 ### Enlaces
-
 **Deploy:** https://pets-blue.vercel.app/
 
 ## Plan de Pruebas para el Proyecto Pet Rescue
 
 _Introducción_
 
-Este documento detalla el alcance, objetivos, recursos y criterios de aceptación para las pruebas del proyecto "MascotasConectadas". Proporciona una guía para la ejecución de los casos de prueba y un cronograma ajustable según la disponibilidad del entorno de despliegue. Además, describe cómo se gestionarán los defectos encontrados durante las pruebas.
+Este documento detalla el alcance, objetivos, recursos y criterios de aceptación para las pruebas del proyecto "Pet Rescue". Proporciona una guía para la ejecución de los casos de prueba y un cronograma ajustable según la disponibilidad del entorno de despliegue. Además, describe cómo se gestionarán los defectos encontrados durante las pruebas.
 
 _Objetivo del Plan de Pruebas_ Garantizar que la plataforma Pet Rescue cumpla con los requisitos funcionales y no funcionales establecidos, mediante una serie de pruebas exhaustivas para validar su calidad, usabilidad y desempeño.
 
