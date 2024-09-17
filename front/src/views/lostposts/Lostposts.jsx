@@ -12,8 +12,12 @@ export default function Lostposts() {
 	useEffect(() => {
 		const fetchData = async () => {
 			const response = await axios.get(`${BASE_URL}/allOwnerPublishes`)
-			console.log(response.data)
-			setPublicaciones(response.data)
+			// console.log(response.data)
+			const publicacionesOrdenadas = response.data.sort((a, b) => {
+				return new Date(b.fecha) - new Date(a.fecha) // Orden descendente, más recientes primero
+			})
+
+			setPublicaciones(publicacionesOrdenadas)
 			setIsLoading(false)
 		}
 		fetchData()
